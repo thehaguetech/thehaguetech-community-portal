@@ -9,6 +9,7 @@ using thehaguetech_community_portal.Models;
 
 namespace thehaguetech_community_portal.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
