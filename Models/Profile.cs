@@ -9,7 +9,7 @@ namespace thehaguetech_community_portal.Models
         
         public string email { get; set; }
 
-        public string socialLinks { get; set; }
+        public ICollection<SocialLink> socialLinks { get; set; }
 
         public int memberSince {get; set;}
 
@@ -17,5 +17,7 @@ namespace thehaguetech_community_portal.Models
 
         public string picture {set; get;}
 
+
+        public ICollection<Profile> connections {set; get;}
     }
 }
