@@ -1,0 +1,202 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    widows: 100%;
+}
+header{
+    width: 100%;
+    background-color: #0F2247;
+}
+.container{
+    width: 90%;
+    margin: 2em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+.logo {
+    position: fixed;
+    float: left;
+    margin: 16px 36px;
+    color:rgb(223, 223, 223);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav ul{
+    list-style:none;
+    overflow: hidden;
+    margin: 0;
+    text-align: right;
+    padding-right: 25px;  
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:rgb(223, 223, 223);
+    font-size: 20px;
+}
+
+.menuIcon{
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 25px;
+    cursor: pointer;
+    color:rgb(223, 223, 223);
+    display: none;
+}
+
+@media screen and (max-width:1024px){
+    .logo{
+        position: fixed;
+        top:0;
+        margin-top: 16px;
+    }
+    nav ul{
+        max-height: 0px;
+    }
+    .showing {
+        max-height: 200em;
+    }
+    nav ul li{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .menuIcon{
+        display: block;
+    }
+}
+
+
+/* Top navigation bar*/
+/* .navTop{
+    display: flex;
+    align-items: center;
+    background-color: #0F2247;
+    width: 100%;
+    min-height: 8vh;
+}
+THT
+.logo{
+    color:rgb(223, 223, 223);
+    text-decoration: none;
+    font-size: 150%;
+    padding:1%;
+}
+.logo:hover{ Remove hover effect
+    text-decoration: none;
+    color:rgb(223, 223, 223);
+}
+/*ICONS*/
+/* .nav-links{
+    padding-left: 70%;
+    right:5%;
+}
+.searchBox{
+    position: absolute;
+    transform: translateX(-50%, -50%);
+    background: rgb(223, 223, 223);
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 70%;
+}
+.searchBtn{
+    font-size: 28px;
+    color:rgb(223, 223, 223);
+    text-decoration:none;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:rgb(223, 223, 223);
+    display: flex;
+    justify-content: center;
+
+}
+.searchTxt{
+
+}
+
+.nav-links a{
+    font-size: 28px;
+    color:rgb(223, 223, 223);
+    text-decoration:none;
+    margin-left: 4%;
+    position:relative;
+}
+
+.burger{
+    display:none;
+    font-size: 28px;
+    color:rgb(223, 223, 223);
+    text-decoration:none;   
+    cursor: pointer;
+    position: relative;
+    margin-left: 80%;
+}
+.mobileNav{
+    height: 92vh;
+    width: 20%;
+    top:0;
+    left:0;
+    position: absolute;
+    background-color: #0F2247;
+    display:flex;
+    color:rgb(223, 223, 223);
+    padding: 10px;
+}
+.mobileNavList li{
+    font-size:80%;
+    list-style-type: none;
+    align-items: left;
+    padding-top: 10px;
+}
+.mobileNavList h4{
+    margin-top: 20%;
+}
+
+@media screen and (max-width:1024px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        display: none;
+    }
+    .logo{
+        font-size: 120%
+    }
+    .burger{
+        display:flex;
+    }
+    .mobileNav{
+        height: 92vh;
+        width: 50%;
+        top:0;
+        right:0;
+        position: absolute;
+        background-color: #0F2247;
+        display:flex;
+        color:rgb(223, 223, 223);
+        padding: 10px;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        
+    }
+    .mobileNav ul{
+        opacity: 0;
+    }
+    .burger-active{
+        transform: translateX(0%);
+    }
+} */
+/*-----------------------------------------*/
+/*LEFT-SIDE NAVIGATION BAR */

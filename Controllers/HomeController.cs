@@ -23,7 +23,22 @@ namespace thehaguetech_community_portal.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Profile()
+        {
+            return View();
+        }
+
+        public IActionResult Chatt()
+        {
+            return View();
+        }
+
+        public IActionResult Notification()
+        {
+            return View();
+        }
+
+        public IActionResult Calendar()
         {
             return View();
         }
