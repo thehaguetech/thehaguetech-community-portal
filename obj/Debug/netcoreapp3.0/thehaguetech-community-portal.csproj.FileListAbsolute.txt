@@ -71,3 +71,4 @@ C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreap
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\thehaguetech-community-portal.dll
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\thehaguetech-community-portal.pdb
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\thehaguetech-community-portal.csproj.CopyComplete
+C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Event.cshtml.g.cs

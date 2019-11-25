@@ -42,6 +42,10 @@ namespace thehaguetech_community_portal.Controllers
         {
             return View();
         }
+        public IActionResult Event()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
