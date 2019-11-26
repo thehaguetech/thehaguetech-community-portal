@@ -9,12 +9,10 @@ namespace thehaguetech_community_portal.Models
         public int linkID {get; set;}
 
         [Key]
-        public Profile profileID {get; set;}
+        public Profile profileFKID {get; set;}
 
         [Required]
         public string name {set;get;}
-
-
 
     }
 }

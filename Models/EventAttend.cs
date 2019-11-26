@@ -7,11 +7,15 @@ namespace thehaguetech_community_portal.Models
     public class EventAttend
     {
 
-        [Key]
-        public Event eventID {get; set;}
 
         [Key]
-        public Profile profileID {set;get;}
+        public int eventAttendID {get; set;}
+
+        [Key]
+        public Event eventFKID {get; set;}
+
+        [Key]
+        public Profile profileFKID {set;get;}
 
         [Required]
         [Column(TypeName="Date")]

@@ -7,11 +7,15 @@ namespace thehaguetech_community_portal.Models
 { 
     public class RoomBooking
     {
-        [Key]
-        public Room roomID {get; set;}
 
         [Key]
-        public Profile profileID {get; set;}
+        public int roomBookingID {get; set;}
+
+        [Key, Required]
+        public Room roomFKID {get; set;}
+
+        [Key, Required]
+        public Profile profileFKID {get; set;}
 
         [Required]
         [Column(TypeName="Date")]

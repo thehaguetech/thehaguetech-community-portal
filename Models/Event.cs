@@ -12,14 +12,13 @@ namespace thehaguetech_community_portal.Models
         public string name {set;get;}
 
         [Required]
-        public string address {set;get;}
+         public string address {set;get;}
                 
         [Required]
         public string description {set;get;}
 
         public string picture {set;get;}
 
- 
         [Required]
         public int capacity {set; get;}
 

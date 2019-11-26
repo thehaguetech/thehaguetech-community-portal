@@ -6,12 +6,14 @@ namespace thehaguetech_community_portal.Models
 { 
     public class ProfileRelationship
     {
-
         [Key]
-        public Profile profileID {get; set;}
+        public int ProfileRelationShipID {get; set;}
 
-        [Key]
-        public Profile profileConnectionID {set;get;}
+        [Key, Required]
+        public Profile profileFKID {get; set;}
+
+        [Key, Required]
+        public Profile profileConnectionFKID {set;get;}
 
         [Required]
         [Column(TypeName="Date")]
