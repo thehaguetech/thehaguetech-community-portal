@@ -9,23 +9,23 @@ namespace thehaguetech_community_portal.Models
         public int eventID {get; set;}
 
         [Required]
-        public string name {set;get;}
+        public string name {get; set;}
 
         [Required]
-         public string address {set;get;}
+         public string address {get; set;}
                 
         [Required]
-        public string description {set;get;}
+        public string description {get; set;}
 
-        public string picture {set;get;}
+        public string picture {get; set;}
 
         [Required]
-        public int capacity {set; get;}
+        public int capacity {get; set;}
 
        [Required]
-        public Profile creator {set;get;}
+        public Profile creator {get; set;}
 
-        public Room room {set; get;}
+        public Room room {get; set;}
 
     }
 }

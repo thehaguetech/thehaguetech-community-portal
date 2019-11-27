@@ -15,11 +15,11 @@ namespace thehaguetech_community_portal.Models
         public Event eventFKID {get; set;}
 
         [Key]
-        public Profile profileFKID {set;get;}
+        public Profile profileFKID {set; get;}
 
         [Required]
         [Column(TypeName="Date")]
-        public DateTime registrationDate { get; set; } 
+        public DateTime registrationDate {get; set;} 
 
     }
 }

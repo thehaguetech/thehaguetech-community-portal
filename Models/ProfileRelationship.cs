@@ -13,7 +13,7 @@ namespace thehaguetech_community_portal.Models
         public Profile profileFKID {get; set;}
 
         [Key, Required]
-        public Profile profileConnectionFKID {set;get;}
+        public Profile profileConnectionFKID {get; set;}
 
         [Required]
         [Column(TypeName="Date")]

@@ -9,16 +9,16 @@ namespace thehaguetech_community_portal.Models
         public int roomID {get; set;}
 
         [Required]
-        public string name {set;get;}
+        public string name {get; set;}
 
         [Required]
-        public int number {set;get;}
+        public int number {get; set;}
        
        [Required]
-       public int capacity {set;get;}
+       public int capacity {get; set;}
 
        [Required]
-       public string equipment {set;get;}
+       public string equipment {get; set;}
 
     }
 }

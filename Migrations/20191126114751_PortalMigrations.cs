@@ -8,16 +8,28 @@ namespace thehaguetech_community_portal.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Expertise",
+                columns: table => new
+                {
+                    expertiseID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    name = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Expertise", x => x.expertiseID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "profiles",
                 columns: table => new
                 {
                     profileID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    firstName = table.Column<string>(nullable: true),
-                    lastName = table.Column<string>(nullable: true),
-                    email = table.Column<string>(nullable: true),
-                    memberSince = table.Column<int>(nullable: false),
-                    expertise = table.Column<string>(nullable: true),
+                    firstName = table.Column<string>(nullable: false),
+                    lastName = table.Column<string>(nullable: false),
+                    email = table.Column<string>(nullable: false),
+                    memberSince = table.Column<DateTime>(type: "Date", nullable: false),
                     picture = table.Column<string>(nullable: true),
                     Discriminator = table.Column<string>(nullable: false),
                     contactPerson = table.Column<string>(nullable: true),
@@ -42,6 +54,32 @@ namespace thehaguetech_community_portal.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_rooms", x => x.roomID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "expertiseProfiles",
+                columns: table => new
+                {
+                    expertiseProfileID = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    profileFKIDprofileID = table.Column<int>(nullable: false),
+                    expertiseFKIDexpertiseID = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_expertiseProfiles", x => x.expertiseProfileID);
+                    table.ForeignKey(
+                        name: "FK_expertiseProfiles_Expertise_expertiseFKIDexpertiseID",
+                        column: x => x.expertiseFKIDexpertiseID,
+                        principalTable: "Expertise",
+                        principalColumn: "expertiseID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_expertiseProfiles_profiles_profileFKIDprofileID",
+                        column: x => x.profileFKIDprofileID,
+                        principalTable: "profiles",
+                        principalColumn: "profileID",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -199,6 +237,16 @@ namespace thehaguetech_community_portal.Migrations
                 column: "roomID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_expertiseProfiles_expertiseFKIDexpertiseID",
+                table: "expertiseProfiles",
+                column: "expertiseFKIDexpertiseID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_expertiseProfiles_profileFKIDprofileID",
+                table: "expertiseProfiles",
+                column: "profileFKIDprofileID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_profileRelationships_profileConnectionFKIDprofileID",
                 table: "profileRelationships",
                 column: "profileConnectionFKIDprofileID");
@@ -230,6 +278,9 @@ namespace thehaguetech_community_portal.Migrations
                 name: "eventAttends");
 
             migrationBuilder.DropTable(
+                name: "expertiseProfiles");
+
+            migrationBuilder.DropTable(
                 name: "profileRelationships");
 
             migrationBuilder.DropTable(
@@ -240,6 +291,9 @@ namespace thehaguetech_community_portal.Migrations
 
             migrationBuilder.DropTable(
                 name: "events");
+
+            migrationBuilder.DropTable(
+                name: "Expertise");
 
             migrationBuilder.DropTable(
                 name: "profiles");

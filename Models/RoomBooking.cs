@@ -19,15 +19,15 @@ namespace thehaguetech_community_portal.Models
 
         [Required]
         [Column(TypeName="Date")]
-        public DateTime timeStart { get; set; } 
+        public DateTime timeStart {get; set; } 
         
         [Required]
         [Column(TypeName="Date")]
-        public DateTime timeEnd { get; set; } 
+        public DateTime timeEnd {get; set; } 
 
         [Required]
         [Column(TypeName="Date")]
-        public DateTime registrationDate { get; set; } 
+        public DateTime registrationDate {get; set; } 
 
 
     }

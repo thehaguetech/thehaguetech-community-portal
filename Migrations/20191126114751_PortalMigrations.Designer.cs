@@ -9,7 +9,7 @@ using thehaguetech_community_portal.Models;
 namespace thehaguetech_community_portal.Migrations
 {
     [DbContext(typeof(PortalContext))]
-    [Migration("20191126103102_PortalMigrations")]
+    [Migration("20191126114751_PortalMigrations")]
     partial class PortalMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -81,6 +81,42 @@ namespace thehaguetech_community_portal.Migrations
                     b.ToTable("eventAttends");
                 });
 
+            modelBuilder.Entity("thehaguetech_community_portal.Models.Expertise", b =>
+                {
+                    b.Property<int>("expertiseID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("expertiseID");
+
+                    b.ToTable("Expertise");
+                });
+
+            modelBuilder.Entity("thehaguetech_community_portal.Models.ExpertiseProfile", b =>
+                {
+                    b.Property<int>("expertiseProfileID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("expertiseFKIDexpertiseID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("profileFKIDprofileID")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("expertiseProfileID");
+
+                    b.HasIndex("expertiseFKIDexpertiseID");
+
+                    b.HasIndex("profileFKIDprofileID");
+
+                    b.ToTable("expertiseProfiles");
+                });
+
             modelBuilder.Entity("thehaguetech_community_portal.Models.Profile", b =>
                 {
                     b.Property<int>("profileID")
@@ -92,19 +128,19 @@ namespace thehaguetech_community_portal.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("email")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("expertise")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("firstName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("lastName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("memberSince")
-                        .HasColumnType("INTEGER");
+                    b.Property<DateTime>("memberSince")
+                        .HasColumnType("Date");
 
                     b.Property<string>("picture")
                         .HasColumnType("TEXT");
@@ -251,6 +287,21 @@ namespace thehaguetech_community_portal.Migrations
                     b.HasOne("thehaguetech_community_portal.Models.Profile", "profileFKID")
                         .WithMany()
                         .HasForeignKey("profileFKIDprofileID");
+                });
+
+            modelBuilder.Entity("thehaguetech_community_portal.Models.ExpertiseProfile", b =>
+                {
+                    b.HasOne("thehaguetech_community_portal.Models.Expertise", "expertiseFKID")
+                        .WithMany()
+                        .HasForeignKey("expertiseFKIDexpertiseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("thehaguetech_community_portal.Models.Profile", "profileFKID")
+                        .WithMany()
+                        .HasForeignKey("profileFKIDprofileID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("thehaguetech_community_portal.Models.ProfileRelationship", b =>

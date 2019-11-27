@@ -3,16 +3,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace thehaguetech_community_portal.Models
 { 
-    public class SocialLink
+    public class ExpertiseProfile
     {
         [Key]
-        public int linkID {get; set;}
+        public int expertiseProfileID {get; set;}
 
-        [Key]
+        [Required]
         public Profile profileFKID {get; set;}
 
         [Required]
-        public string name {get; set;}
+        public Expertise expertiseFKID {get; set;}
 
     }
 }
