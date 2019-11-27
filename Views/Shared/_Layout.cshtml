@@ -13,43 +13,54 @@
 </head>
 
 <body>
-    
-        <div class="menu">
-            <div class="row">
-            <div class="col-6">
+    <div class="menu">
+        <div class="row">
+            <div class="col-6 col-md-4">
                 <div class="logo">
                     <a asp-area="" asp-controller="Home" asp-action="index">The Hague Tech Community Platform</a>
                 </div>
             </div>
-            <div class="col-6">            
+            <div class="col-6 col-md-8">            
                 <nav class="topNav">
                     <ul>
-                        <!-- <li><a class="fa fa-comment" asp-area="" asp-controller="Home" asp-action="Chatt"></a></li> -->
-                        <!-- <li><a class="fa fa-calendar-o fa-lg" asp-area="" asp-controller="Home" asp-action="Calendar"></a></li> -->
-                        <li><a class="fa fa-user fa-2x" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
-                        <li><a class="fa fa-bell fa-2x" asp-area="" asp-controller="Home" asp-action="Notification"></a></li>
-                        <li><a class="fa fa-sign-out fa-2x" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
+                        <li><a class="fa fa-user" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
+                        <li><a class="fa fa-bell" asp-area="" asp-controller="Home" asp-action="Notification"></a></li>
+                        <li><a class="fa fa-sign-out" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
                     </ul>
                 </nav>
                 <div class="menuIcon">
-                    <i class="fa fa-bars fa-2x"></i>
+                    <i class="fa fa-bars fa-3x"></i>
                 </div>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="sideNav col-2">
+        <div class="sideNav col-2 sm-4">
             <nav>
-                <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <form class="search"> 
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <h2 class="sideNavHeader">Community</h2>
+                <ul class="sideNavList">
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Event</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Companies</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Members</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> THT-staff</a></li>
+                </ul>
+                <h2 class="sideNavHeader">Tools</h2>               
+                <ul class="sideNavList">
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Room Booking</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Calendar"> Calendar</a></li>
+                </ul>
+                <h2 class="sideNavHeader">More</h2>
+                <ul class="sideNavList">
+                    <li class="sideNavContent">Settings</li>
+                    <li class="sideNavContent">Support</li>
                 </ul>
             </nav>
         </div>          
-        <div class="container col-10">
+        <div class="container col-10 sm-8">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>

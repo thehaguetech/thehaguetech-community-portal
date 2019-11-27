@@ -1,63 +1,89 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    widows: 100%;
-}
-.menu{
+
+.menu{ /*Top navigation*/
     background-color: #0F2247;
-    width: 100%;
+    width: 100%;    
+    padding: 2px 18px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2;
 }
-.container{
-    width: 100%;
-    margin: 2em auto;
+/*-------------------------------------------------------------*/
+/*MAIN*/
+.container{ /*Home content*/ 
     line-height: 20px;
     text-align: justify;
     display: inline-block;
-    padding: 0% 2% 0%;
     border: 2px solid red;
 }
-.logo {
-    /* position: fixed; */
+/*-------------------------------------------------------------*/
+/*HEADER*/
+.logo{
+    height:75px;    
+    vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
+}
+.logo a{ /*THT header*/
     float: left;
-    margin: 16px 36px;
     color:rgb(223, 223, 223);
-    font-weight: bold;
     text-decoration: none;
     font-size: 24px;
 }
-
 .topNav ul{
     list-style:none;
     overflow: hidden;
-    margin: 0 25px 0 0;
+    margin: 0 20px 0 0;
     text-align: right;
 }
-
 .topNav ul li {
     display: inline-block;
     padding: 20px;
 }
-
 .topNav ul li a {
     text-decoration: none;
     color:rgb(223, 223, 223);
-    font-size: 20px;
+    font-size: 200%;
 }
-
 .menuIcon{
-    width: 100%;
     text-align: right;
     box-sizing: border-box;
     cursor: pointer;
     color:rgb(223, 223, 223);
     display: none;
 }
-.sideNav{
-    height: 100vh;
-    background-color: #5361BC;
-    display: inline-block;
-    }
+/*SEARCH*/
+.search{
+    border: 2px solid red;
+    margin-top:10%;
 
+}
+/*----------------------------------------------------------------*/
+.sideNav{
+    border: 2px solid red;
+    background-color: #5361BC;
+    height: 95vh;
+    /* padding:2% 0% 0% 0%; */
+    
+    display: inline-block;
+}
+/*-------------------------------------------------------------*/
+
+.sideNavList{
+    border: 2px solid blue;
+    list-style:none;
+}
+
+.sideNavHeader {
+    color:rgb(223, 223, 223);
+    border: 2px solid yellow;
+}
+.sideNavContent{
+    color:rgb(223, 223, 223);
+    text-decoration: none;
+    border: 2px solid black;
+}
+/*-------------------------------MEDIA------------------------------*/
 
 @media screen and (max-width:1024px){
     .menu{

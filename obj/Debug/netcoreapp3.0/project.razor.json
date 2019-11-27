@@ -1944,7 +1944,7 @@
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
-        "Documentation": "\n            <summary>\n            Renders a form element that cascades an <see cref=\"P:Microsoft.AspNetCore.Components.Forms.EditForm.EditContext\" /> to descendants.\n            </summary>\n        ",
+        "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
@@ -2085,7 +2085,7 @@
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Forms.EditForm",
         "AssemblyName": "Microsoft.AspNetCore.Components.Web",
-        "Documentation": "\n            <summary>\n            Renders a form element that cascades an <see cref=\"P:Microsoft.AspNetCore.Components.Forms.EditForm.EditContext\" /> to descendants.\n            </summary>\n        ",
+        "Documentation": null,
         "TagOutputHint": null,
         "CaseSensitive": true,
         "TagMatchingRules": [
@@ -14359,8 +14359,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Profile.cshtml",
+      "TargetPath": "Views\\Home\\Profile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Event.cshtml",
+      "TargetPath": "Views\\Home\\Event.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Calendar.cshtml",
+      "TargetPath": "Views\\Home\\Calendar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Chatt.cshtml",
+      "TargetPath": "Views\\Home\\Chatt.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14371,6 +14391,11 @@
     {
       "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Notification.cshtml",
+      "TargetPath": "Views\\Home\\Notification.cshtml",
       "FileKind": "mvc"
     }
   ],
