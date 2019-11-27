@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
+  "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14344,33 +14344,58 @@
   "RootNamespace": "thehaguetech_community_portal",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Chatt.cshtml",
+      "TargetPath": "Views\\Home\\Chatt.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Profile.cshtml",
+      "TargetPath": "Views\\Home\\Profile.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Calendar.cshtml",
+      "TargetPath": "Views\\Home\\Calendar.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Notification.cshtml",
+      "TargetPath": "Views\\Home\\Notification.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Event.cshtml",
+      "TargetPath": "Views\\Home\\Event.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],

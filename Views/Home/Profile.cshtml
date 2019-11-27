@@ -1,7 +1,127 @@
 ﻿@{
     ViewData["Title"] = "Profile";
 }
-<h1>@ViewData["Title"]</h1>
+<head>
+    
+    <link rel="stylesheet" href="~/css/sharedStyle.css">
 
-<p>Use this page to detail your site's privacy profile.</p>
-<h1>heriaweoroapfawpäawfä</h1>
+    <style>
+
+        .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        }
+
+        .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+        }
+
+        .tab button:hover {
+        background-color: #ddd;
+        }
+
+        .tab button.active {
+        background-color: #ccc;
+        }
+
+        .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        }
+
+        .chipLabel {
+            border: none;
+            color: black;
+            background-color: #dddddd;
+            padding: auto;
+            cursor: pointer;
+            border: 2px solid #808080;
+            -moz-border-radius: 16px;
+            -webkit-border-radius: 16px;
+            border-radius: 16px;
+        }
+        
+        .chipLabel:hover {
+            color: black;
+            background-color: #fff;
+            border: 2px solid #808080;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>@ViewData["Title"]</h1>
+    <p>Use this page to detail your site's privacy profile.</p>
+    <h1>TEST</h1>
+
+
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'About')">About</button>
+        <button class="tablinks" onclick="openTab(event, 'Activity')">Activity</button>
+        <button class="tablinks" onclick="openTab(event, 'Connections')">Connections</button>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <div>
+            <br>
+            <h3>About the Company</h3>
+            <p>Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free. Gastropub green juice jianbing ramps umami dolore. Slow-carb hammock deserunt pitchfork affogato eiusmod everyday carry wolf tempor mlkshk umami swag iPhone green juice.</p> 
+        </div> <br><hr><br>
+        <div>
+            <h3>Skills and Expertises</h3>
+            <div>
+                <button class="chipLabel">Chip Label</button>
+            </div>
+        </div> <br><hr><br>
+        <div>
+            <h3>Team</h3>
+            
+        </div> <br><hr><br>
+        <div>
+            <h3>Project</h3>
+            
+        </div>
+    </div>
+
+    <div id="Activity" class="tabcontent">
+        <h3>Activity inside the community</h3>
+        <div>
+
+        </div>
+    </div>
+
+    <div id="Connections" class="tabcontent">
+        <h3>new profile activities </h3>
+        <p>Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free. Gastropub green juice jianbing ramps umami dolore. Slow-carb hammock deserunt pitchfork affogato eiusmod everyday carry wolf tempor mlkshk umami swag iPhone green juice.</p>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+             }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+   
+</body>
