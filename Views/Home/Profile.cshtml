@@ -4,6 +4,7 @@
 <head>
     
     <link rel="stylesheet" href="~/css/sharedStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
 
@@ -57,6 +58,11 @@
             border: 2px solid #808080;
         }
 
+        .profileContainer{
+            background-color:linen;
+            border:3 solid #ff0000;
+        }
+
     </style>
 
 </head>
@@ -65,6 +71,26 @@
     <h1>@ViewData["Title"]</h1>
     <p>Use this page to detail your site's privacy profile.</p>
     <h1>TEST</h1>
+
+
+    <div class="profileContainer">
+        <div class="row" >
+            <div class="col-lg-4 col-sm-12" >
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="col-lg-4 col-sm-6" >
+                <div class="row">Company name</div>
+                <div class="row">Activity score</div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="row">
+                    <button class="btn btn-primary" type="submit">Edit Profile Button</button>
+                </div>
+                <div class="row">Website Link</div>
+                <div class="row">Social Links</div>
+            </div>
+        </div>
+    </div>
 
 
 
