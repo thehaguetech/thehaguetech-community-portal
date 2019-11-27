@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\furka\Documents\GitHub\thehaguetech-community-portal\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\User\Documents\GitHub\thehaguetech-community-portal\Views\_ViewImports.cshtml"
 using thehaguetech_community_portal;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\furka\Documents\GitHub\thehaguetech-community-portal\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\User\Documents\GitHub\thehaguetech-community-portal\Views\_ViewImports.cshtml"
 using thehaguetech_community_portal.Models;
 
 #line default
@@ -59,7 +59,7 @@ using thehaguetech_community_portal.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
 #nullable restore
-#line 1 "C:\Users\furka\Documents\GitHub\thehaguetech-community-portal\Views\Home\Profile.cshtml"
+#line 1 "C:\Users\User\Documents\GitHub\thehaguetech-community-portal\Views\Home\Profile.cshtml"
   
     ViewData["Title"] = "Profile";
 
@@ -83,39 +83,40 @@ using thehaguetech_community_portal.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral(@"
+    <link rel=""stylesheet"" href=""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"">
 
     <style>
 
         .tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
         }
 
         .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
         }
 
         .tab button:hover {
-            background-color: #ddd;
+        background-color: #ddd;
         }
 
         .tab button.active {
-            background-color: #ccc;
+        background-color: #ccc;
         }
 
         .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
         }
 
         .chipLabel {
@@ -125,9 +126,10 @@ using thehaguetech_community_portal.Models;
             padding: auto;
             cursor: pointer;
             border: 2px solid #808080;
+");
+                WriteLiteral(@"
             -moz-border-radius: 16px;
-           ");
-                WriteLiteral(@" -webkit-border-radius: 16px;
+            -webkit-border-radius: 16px;
             border-radius: 16px;
         }
         
@@ -142,17 +144,10 @@ using thehaguetech_community_portal.Models;
             transition: 0.3s;
             width: 180px;
             border-radius: 5px;
+        .profileContainer{
+            background-color:linen;
+            border:3 solid #ff0000;
         }
-
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
-
-        img {
-            border-radius: 5px 5px 0 0;
-        }
-
-        
 
     </style>
 
@@ -172,7 +167,7 @@ using thehaguetech_community_portal.Models;
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3e8a065749b582f09d805e31e6270b82586e821e8128", async() => {
                 WriteLiteral("\r\n    <h1>");
 #nullable restore
-#line 82 "C:\Users\furka\Documents\GitHub\thehaguetech-community-portal\Views\Home\Profile.cshtml"
+#line 71 "C:\Users\User\Documents\GitHub\thehaguetech-community-portal\Views\Home\Profile.cshtml"
    Write(ViewData["Title"]);
 
 #line default
@@ -183,11 +178,32 @@ using thehaguetech_community_portal.Models;
     <h1>TEST</h1>
 
 
+    <div class=""profileContainer"">
+        <div class=""row"" >
+            <div class=""col-lg-4 col-sm-12"" >
+                <i class=""fa fa-user-circle""></i>
+            </div>
+            <div class=""col-lg-4 col-sm-6"" >
+                <div class=""row"">Company name</div>
+                <div class=""row"">Activity score</div>
+            </div>
+            <div class=""col-lg-4 col-sm-6"">
+                <div class=""row"">
+                    <button class=""btn btn-primary"" type=""submit"">Edit Profile Button</button>
+                </div>
+                <div class=""row"">Website Link</div>
+                <div class=""row"">Social Links</div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class=""tab"">
         <button class=""tablinks"" onclick=""openTab(event, 'About')"">About</button>
         <button class=""tablinks"" onclick=""openTab(event, 'Activity')"">Activity</button>
-        <button class=""tablinks"" onclick=""openTab(event, 'Connections')"">Connections</button>
+        <button cl");
+                WriteLiteral(@"ass=""tablinks"" onclick=""openTab(event, 'Connections')"">Connections</button>
     </div>
 
     <div id=""About"" class=""tabcontent"">
@@ -197,10 +213,9 @@ using thehaguetech_community_portal.Models;
             <p>Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free. Gastropub green juice jianbing ramps umami dolore. Slow-carb hammock deserunt pitchfork affogato eiusmod everyday carry wolf tempor mlkshk umami swag iPhone green juice.</p> 
         </div> <br><hr><br>
         <div>
-            <h3>Skills and Expertises</h3> 
+            <h3>Skills and Expertises</h3>
             <div>
-                <b");
-                WriteLiteral(@"utton class=""chipLabel"">Chip Label</button>
+                <button class=""chipLabel"">Chip Label</button>
             </div>
         </div> <br><hr><br>
         <div>
@@ -221,7 +236,8 @@ using thehaguetech_community_portal.Models;
     </div>
 
     <div id=""Activity"" class=""tabcontent"">
-        <br>
+");
+                WriteLiteral(@"
         <h3>Activity inside the community</h3>
         <div>
 
@@ -243,14 +259,8 @@ using thehaguetech_community_portal.Models;
             }
             tablinks = document.getElementsByClassName(""tablinks"");
             for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace("" active"", """");
-             }
-            document.getElementById(tabName).style.display = ""block"";
-            evt.currentTarget.className += "" active"";
-        }
-    </script>
-   
-");
+                tablinks[i].c");
+                WriteLiteral("lassName = tablinks[i].className.replace(\" active\", \"\");\r\n             }\r\n            document.getElementById(tabName).style.display = \"block\";\r\n            evt.currentTarget.className += \" active\";\r\n        }\r\n    </script>\r\n   \r\n");
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_BodyTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.BodyTagHelper>();
