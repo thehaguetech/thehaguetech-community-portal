@@ -31,24 +31,26 @@
                     <i onclick="myFunction()" class="fa fa-bars fa-3x dropbtn"></i>
                     <div class="dropdown">
                         <div id="myDropdown" class="dropdown-content">
-                            <a asp-area="" asp-controller="Home" asp-action="Event">Event</a>
+                            <h4 class="dropdownHeader">Community</h4>
                             <a asp-area="" asp-controller="Home" asp-action="Event">Companies</a>
                             <a asp-area="" asp-controller="Home" asp-action="Event">Members</a>
                             <a asp-area="" asp-controller="Home" asp-action="Event">THT-Staff</a>
+                            <h4 class="dropdownHeader">Tools</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Event">Event</a>
                             <a asp-area="" asp-controller="Home" asp-action="Calendar">Room booking</a>
                             <a asp-area="" asp-controller="Home" asp-action="Calendar">Calendar</a>
+                            <h4 class="dropdownHeader">More</h4>
                             <a asp-area="" asp-controller="Home" asp-action="Profile">Settings</a>
-                            <a asp-area="" asp-controller="Home" asp-action="Profile">Settings</a>
-                            <a>log out</a>
-
+                            <a asp-area="" asp-controller="Home" asp-action="Profile">Support</a>
+                            <h4 class="dropdownHeader">log out</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Profile">Log out</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="sideNav col-6 col-md-4">
+        <div class="sideNav">
             <nav>
                 <div class="search">                    
                     <form action="/action_page.php">
@@ -58,13 +60,13 @@
                 </div>
                 <h2 class="sideNavHeader">Community</h2>
                 <ul class="sideNavList">
-                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Event</a></li>
-                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Companies</a></li>
-                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Members</a></li>
-                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> THT-staff</a></li>
+                    <li><div class="fa fa-handshake-o" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Companies</a></li>
+                    <li><div class="fa fa-group" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Members</a></li>
+                    <li><div class="fa fa-calendar-check-o" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> THT-staff</a></li>
                 </ul>
                 <h2 class="sideNavHeader">Tools</h2>               
                 <ul class="sideNavList">
+                    <li><div class="fa fa-calendar-check-o" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Event</a></li>
                     <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Room Booking</a></li>
                     <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Calendar"> Calendar</a></li>
                 </ul>
@@ -75,16 +77,16 @@
                 </ul>
             </nav>
         </div>          
-        <div class="container col-12 col-md-8">
+        <div class="containerMain">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
         </div> 
-
     </div>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
     /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
