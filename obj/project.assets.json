@@ -8,20 +8,19 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Temp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
+      "projectUniqueName": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
       "projectName": "thehaguetech-community-portal",
-      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\thehaguetech-community-portal\\obj\\",
+      "projectPath": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
+      "packagesPath": "C:\\Users\\Temp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Temp\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"

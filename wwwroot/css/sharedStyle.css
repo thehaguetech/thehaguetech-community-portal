@@ -1,0 +1,216 @@
+html, body{
+    height:100%;
+}
+.menu{ /*Top navigation*/
+    background: rgb(15,34,71);
+    background: linear-gradient(360deg, rgba(15,34,71,1) 45%, rgba(83,97,188,1) 100%);
+    padding: 2px 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    border-bottom: 1px solid #5361BC;
+}
+/*-------------------------------------------------------------*/
+/*HEADER*/
+.logo{
+    height:75px;    
+    vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
+}
+.logo a{ /*THT header*/
+    float: left;
+    color:rgb(223, 223, 223);
+    text-decoration: none;
+    font-size: 24px;
+}
+.topNav ul{
+    list-style:none;
+    overflow: hidden;
+    margin: 0 20px 0 0;
+    text-align: right;
+}
+.topNav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+.topNav ul li a {
+    text-decoration: none;
+    color:rgb(223, 223, 223);
+    font-size: 200%;
+}
+.topNav ul:hover li:hover a:hover{
+    color: #5361BC;
+}
+/*MOBILE ICONS*/
+.menuIcon{ 
+    text-align: right;
+    box-sizing: border-box;
+    cursor: pointer;
+    color:rgb(223, 223, 223);
+    display: none;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.menuIcon i{
+    padding: 10px;
+}
+.menuIcon i:hover {
+    color: #5361BC;
+}
+/*----------------MOBILE DROPDOWN-----------------*/
+.dropbtn{
+    color:rgb(223, 223, 223);
+    padding: 10px;
+    cursor: pointer;
+}
+  
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: rgb(223, 223, 223);
+    min-width: 450px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right:0px;
+    top:25px;
+}  
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown a:hover {
+        background-color: #5361BC;
+        color:rgb(223, 223, 223);
+}
+  
+.show {display: block;}
+
+.dropdownHeader{
+    background-color: #0F2247;
+    color: rgb(223, 223, 223);
+    align-content: left;
+    padding-right: 5%;
+}
+/*-----------SEARCH------------------------*/
+.search {
+    margin: 10% 2% 5% 2%;
+    overflow: hidden;
+    padding-left: 10%;
+}
+.search input[type=text] {
+    border-radius: 10px 0 0 10px;
+    border: none;
+    padding: 2% 12% 2% 12%;
+}
+.search button {
+    padding: 2%;
+    background: rgb(223, 223, 223);
+    border: none;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    background: #5361BC;
+    color:rgb(223, 223, 223);
+  }
+.search button:hover {
+    background: rgb(223, 223, 223);
+    color: #5361BC;
+  }
+  
+/*-----------------------------SIDE-NAV-----------------------------------*/
+.sideNavContainer{
+    width:20%;
+    height: 200vh;
+    background-color: #0F2247;
+    float:left;
+    position: relative;
+}
+
+.sideNav{
+    display: inline-block;
+    width: 20%;
+    position: fixed;
+    top: 8vh;
+}
+
+.sideNavList{
+    list-style:none;
+}
+
+.sideNavHeader {
+    color:rgb(223, 223, 223);
+    padding-left: 40px;
+    border-bottom: 2px solid #5361BC;
+    margin: 0% 10% 0 10%;
+    padding-left: 0%;
+}
+.sideNavContent{
+    color:rgb(223, 223, 223);
+    text-decoration: none;
+    font-size: 20px;
+}
+.sideNavFooter{
+    bottom: 0%;
+    color:rgb(223, 223, 223);
+    top:90px;
+    font-size: 12px;
+}
+.sideNavList a:hover{
+    text-decoration: none;
+}
+
+/*-------------------------------------------------------------*/
+/*MAIN*/
+.containerMain{ /*Home content*/ 
+    width: 80%;
+    line-height: 20px;
+    text-align: justify;
+    display: inline-block;
+    padding: 2%;
+}
+
+/*-------------------------------MEDIA------------------------------*/
+@media screen and (max-width:1650px){
+    .sideNavContainer{
+        width: 30%;
+    }
+    .sideNav{
+        width:30%;
+    }
+    .containerMain{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:1124px){
+    .logo{
+        display: none;
+    }
+    .topNav ul{
+        max-height: 0px;
+    }
+    .menuIcon{
+        display: block;
+    }
+    .sideNavContainer{
+        display: none;
+    }
+    .sideNav{
+        display: none;
+    }
+    .containerMain{
+        width: 100%;
+    }
+}
+

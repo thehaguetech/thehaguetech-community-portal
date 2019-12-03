@@ -1,48 +1,115 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - thehaguetech_community_portal</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/sharedStyle.css">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">thehaguetech_community_portal</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <div class="menu">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="logo">
+                    <a asp-area="" asp-controller="Home" asp-action="index">The Hague Tech Community Platform</a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
+            <div class="col-md-8">            
+                <nav class="topNav">
+                    <ul>
+                        <li><a class="fa fa-user" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
+                        <li><a class="fa fa-bell" asp-area="" asp-controller="Home" asp-action="Notification"></a></li>
+                        <li><a class="fa fa-sign-out" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
+                    </ul>
+                </nav>
+                <div class="menuIcon">
+                    <i class="fa fa-search fa-3x"></i>                                     
+                    <i onclick="myFunction()" class="fa fa-bars fa-3x dropbtn"></i>
+                    <div class="dropdown">
+                        <div id="myDropdown" class="dropdown-content">
+                            <h4 class="dropdownHeader">Community</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Event">Companies</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Event">Members</a>
+                            <!-- <a asp-area="" asp-controller="Home" asp-action="Event">THT-Staff</a> -->
+                            <h4 class="dropdownHeader">Tools</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Event">Event</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Calendar">Room booking</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Calendar">Calendar</a>
+                            <h4 class="dropdownHeader">More</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Profile">Settings</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Profile">Support</a>
+                            <h4 class="dropdownHeader">log out</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Profile">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sideNavContainer">
+        <div class="sideNav">
+            <nav>
+                <div class="search">                    
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search..." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <h2 class="sideNavHeader">Community</h2>
+                <ul class="sideNavList">
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Companies</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Members</a></li>
+                    <!-- <li><div class="fa fa-handshake-o" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> THT-staff</a></li> -->
+                </ul>
+                <h2 class="sideNavHeader">Tools</h2>               
+                <ul class="sideNavList">
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Event</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Room Booking</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Calendar"> Calendar</a></li>
+                </ul>
+                <h2 class="sideNavHeader">More</h2>
+                <ul class="sideNavList">
+                    <li class="sideNavContent">Settings</li>
+                    <li class="sideNavContent">Support</li>
+                </ul>
+            </nav>
+        </div> 
+    </div>  
+    <div class="containerMain">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    </div> 
+    
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - thehaguetech_community_portal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+        }
+        }
+    }
+    }
+    </script> 
     @RenderSection("Scripts", required: false)
 </body>
 </html>
