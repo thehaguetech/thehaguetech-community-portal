@@ -1,6 +1,9 @@
-
+html, body{
+    height:100%;
+}
 .menu{ /*Top navigation*/
-    background-color: #0F2247;
+    background: rgb(15,34,71);
+    background: linear-gradient(360deg, rgba(15,34,71,1) 45%, rgba(83,97,188,1) 100%);
     padding: 2px 18px;
     position: sticky;
     top: 0;
@@ -126,14 +129,19 @@
   }
   
 /*-----------------------------SIDE-NAV-----------------------------------*/
-.sideNav{
+.sideNavContainer{
+    width:20%;
+    height: 200vh;
     background-color: #0F2247;
-   
+    float:left;
+    position: relative;
+}
+
+.sideNav{
     display: inline-block;
     width: 20%;
-    position: sticky;
-    top: 0;
-    border-top: 1px solid #5361BC;
+    position: fixed;
+    top: 8vh;
 }
 
 .sideNavList{
@@ -143,11 +151,23 @@
 .sideNavHeader {
     color:rgb(223, 223, 223);
     padding-left: 40px;
+    border-bottom: 2px solid #5361BC;
+    margin: 0% 10% 0 10%;
+    padding-left: 0%;
 }
 .sideNavContent{
     color:rgb(223, 223, 223);
     text-decoration: none;
     font-size: 20px;
+}
+.sideNavFooter{
+    bottom: 0%;
+    color:rgb(223, 223, 223);
+    top:90px;
+    font-size: 12px;
+}
+.sideNavList a:hover{
+    text-decoration: none;
 }
 
 /*-------------------------------------------------------------*/
@@ -157,14 +177,16 @@
     line-height: 20px;
     text-align: justify;
     display: inline-block;
-    border: 2px solid red;
-    float:right;
+    padding: 2%;
 }
 
 /*-------------------------------MEDIA------------------------------*/
 @media screen and (max-width:1650px){
-    .sideNav{
+    .sideNavContainer{
         width: 30%;
+    }
+    .sideNav{
+        width:30%;
     }
     .containerMain{
         width: 70%;
@@ -180,6 +202,9 @@
     }
     .menuIcon{
         display: block;
+    }
+    .sideNavContainer{
+        display: none;
     }
     .sideNav{
         display: none;

@@ -34,7 +34,7 @@
                             <h4 class="dropdownHeader">Community</h4>
                             <a asp-area="" asp-controller="Home" asp-action="Event">Companies</a>
                             <a asp-area="" asp-controller="Home" asp-action="Event">Members</a>
-                            <a asp-area="" asp-controller="Home" asp-action="Event">THT-Staff</a>
+                            <!-- <a asp-area="" asp-controller="Home" asp-action="Event">THT-Staff</a> -->
                             <h4 class="dropdownHeader">Tools</h4>
                             <a asp-area="" asp-controller="Home" asp-action="Event">Event</a>
                             <a asp-area="" asp-controller="Home" asp-action="Calendar">Room booking</a>
@@ -50,6 +50,7 @@
             </div>
         </div>
     </div>
+    <div class="sideNavContainer">
         <div class="sideNav">
             <nav>
                 <div class="search">                    
@@ -60,13 +61,13 @@
                 </div>
                 <h2 class="sideNavHeader">Community</h2>
                 <ul class="sideNavList">
-                    <li><div class="fa fa-handshake-o" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Companies</a></li>
-                    <li><div class="fa fa-group" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Members</a></li>
-                    <li><div class="fa fa-calendar-check-o" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> THT-staff</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Companies</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Members</a></li>
+                    <!-- <li><div class="fa fa-handshake-o" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> THT-staff</a></li> -->
                 </ul>
                 <h2 class="sideNavHeader">Tools</h2>               
                 <ul class="sideNavList">
-                    <li><div class="fa fa-calendar-check-o" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Event</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Event</a></li>
                     <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Room Booking</a></li>
                     <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Calendar"> Calendar</a></li>
                 </ul>
@@ -76,13 +77,14 @@
                     <li class="sideNavContent">Support</li>
                 </ul>
             </nav>
-        </div>          
-        <div class="containerMain">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
         </div> 
-    </div>
+    </div>  
+    <div class="containerMain">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div> 
+    
 
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
