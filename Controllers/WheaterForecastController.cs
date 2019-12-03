@@ -1,15 +1,24 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using thehaguetech_community_portal.Models;
+
 
 [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+
+        static HttpClient client = new HttpClient();
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -86,39 +95,112 @@ using thehaguetech_community_portal.Models;
         }
 
 
+        private static async Task<string> RequestTokenToAuthorizationServer(Uri uriAuthorizationServer, string clientId, string scope, string clientSecret)
+        {
+            HttpResponseMessage responseMessage;
+            using (HttpClient client = new HttpClient())
+            {
+                HttpRequestMessage tokenRequest = new HttpRequestMessage(HttpMethod.Post, uriAuthorizationServer);
+                HttpContent httpContent = new FormUrlEncodedContent(
+                    new[]
+                    {
+                    new KeyValuePair<string, string>("grant_type", "client_credentials"),
+                    new KeyValuePair<string, string>("client_id", clientId),
+                    new KeyValuePair<string, string>("scope", scope),
+                    new KeyValuePair<string, string>("client_secret", clientSecret)
+                    });
+                tokenRequest.Content = httpContent;
+                responseMessage = await client.SendAsync(tokenRequest);
+            }
+            return await responseMessage.Content.ReadAsStringAsync();
+        }
+
 
       [HttpGet]
         // public ActionResult<IEnumerable<GameState>> LoadGame()
-        public ActionResult<Profile> GetAll()
+        public  ActionResult<IEnumerable<WeatherForecast>> GetAllAsync()
         {
-     
-                    using (var db = new PortalContext())
-            {
-                // Create
-                // Console.WriteLine("Inserting a new blog");
-                // db.Add(new Profile { 
-                //     firstName = "Jan",
-                //     lastName = "Piet",
-                //     email = "JanPiet",
-                //     socialLinks = "FB",
-                //     memberSince = 2016,
-                //     expertise = "C#",
-                //     picture= "none"
 
-                //  });
-                // db.SaveChanges();
 
-                // Read
-                Console.WriteLine("Querying for a blog");
-                var blog = db.profiles
-                    .OrderBy(b => b.profileID)
-                    .First();
+            Uri authorizationServerTokenIssuerUri = new Uri("https://identity.officernd.com/oauth/token");
+            string clientId = "y8lP1LZNSQyzcGys";    
+            string clientSecret = "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH";
+            string scope = "officernd.api.read";
+
+            //access token request
+            string rawJwtToken = RequestTokenToAuthorizationServer(
+                 authorizationServerTokenIssuerUri,
+                 clientId, 
+                 scope, 
+                 clientSecret)
+                .GetAwaiter()
+                .GetResult();
 
 
 
+            System.Console.WriteLine(rawJwtToken);
 
-                return blog;
-            }
+        // var request = new HttpRequestMessage(HttpMethod.Post, "https://identity.officernd.com/oauth/token");
+        // request.Content = new FormUrlEncodedContent(new Dictionary<string, string> {
+        //     { "client_id", "y8lP1LZNSQyzcGys" },
+        //     { "client_secret", "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH" },
+        //     { "grant_type", "client_credentials" }
+        // });
+        
+            // var client = new HttpClient
+            // {
+            //     BaseAddress = new Uri("https://identity.officernd.com/oauth/token")
+            // };
+
+
+            // var content = new StringContent(
+            //     JsonConvert.SerializeObject(
+            //         new 
+            //         { 
+            //             client_id = "y8lP1LZNSQyzcGys", 
+            //             client_secret = "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH", 
+            //             grant_type = "client_credentials" 
+            //         }), Encoding.UTF8, "application/json"); 
+                    
+            //                        System.Console.WriteLine(content);
+
+            // var response = await client.PostAsync("oauth/token", content); 
+            // var tokenResponse = await response.Content.ReadAsStringAsync();
+
+
+            // System.Console.WriteLine(response);
+            // System.Console.WriteLine(tokenResponse);
+
+
+
+    // var request = new HttpRequestMessage(HttpMethod.Post, "https://identity.officernd.com/oauth/token");
+    // request.Content = new FormUrlEncodedContent(new Dictionary<string, string> {
+    //     { "client_id", "y8lP1LZNSQyzcGys" },
+    //     { "client_secret", "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH" },
+    //     { "grant_type", "client_credentials" }
+    // });
+    // System.Console.WriteLine(request.Content);
+    // var response = await client.SendAsync(request);
+    // response.EnsureSuccessStatusCode();
+    // System.Console.WriteLine(response);
+
+
+    // var payload = JObject.Parse(await response.Content.ReadAsStringAsync());
+    // var token = payload.Value<string>("access_token");
+
+
+                        var rng = new Random();
+
+
+                        
+           return Enumerable.Range(1, 2).Select(index => new WeatherForecast
+                {
+                    Date = DateTime.Now.AddDays(index),
+                    TemperatureC = rng.Next(-20, 55),
+                    Summary = Summaries[rng.Next(Summaries.Length)]
+                })
+                .ToArray();
+            
         }
 
 
