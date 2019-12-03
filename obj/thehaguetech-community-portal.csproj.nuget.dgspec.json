@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
         "projectName": "thehaguetech-community-portal",
-        "projectPath": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
-        "packagesPath": "C:\\Users\\Temp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\obj\\",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\thehaguetech-community-portal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Temp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
