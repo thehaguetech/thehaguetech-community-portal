@@ -10,7 +10,7 @@ namespace thehaguetech_community_portal.Models
     public class Apicontroller
     {
         public static JObject JWTtoken {set; get;}
-        private string apiBaseURL = "https://app.officernd.com/api/v1/organizations/thehaguetech/resources";
+        // private string apiBaseURL = "https://app.officernd.com/api/v1/organizations/thehaguetech/resources";
 
     private static async Task<string> RequestTokenToAuthorizationServer(Uri uriAuthorizationServer, string clientId, string scope, string clientSecret){
             HttpResponseMessage responseMessage;
