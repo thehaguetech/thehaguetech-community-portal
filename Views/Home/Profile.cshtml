@@ -4,18 +4,20 @@
 <head>
     
     <link rel="stylesheet" href="~/css/sharedStyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
 
         .tab {
             overflow: hidden;
             border: 1px solid #ccc;
-            background-color: #f1f1f1;
+            background-color: #0F2247;
+            border:green solid 1px;
         }
 
         .tab button {
             background-color: inherit;
+            color: white;
+            font-weight: bold;
             float: left;
             border: none;
             outline: none;
@@ -27,10 +29,13 @@
 
         .tab button:hover {
             background-color: #ddd;
+            font-weight: bold;
         }
 
         .tab button.active {
             background-color: #ccc;
+            font-weight: bold;
+            color: #0F2247;
         }
 
         .tabcontent {
@@ -42,8 +47,8 @@
 
         .chipLabel {
             border: none;
-            color: black;
-            background-color: #dddddd;
+            color: white;
+            background-color: #5361BC;
             padding: auto;
             cursor: pointer;
             border: 2px solid #808080;
@@ -59,8 +64,7 @@
         }
 
         .profileContainer{
-            background-color:linen;
-            border:3 solid #ff0000;
+            border: 3px solid yellow;
         }
 
         .card {
@@ -75,52 +79,53 @@
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
 
-        img {
-            border-radius: 5px 5px 0 0;
-            width:180px;
-            height:180px;
-        }
 
         .nameCard {
-            margin: -15px 5px;
+            margin: 5px 5px;
             padding: 2px 16px;
         }
 
         .jobCard {
-            margin:-30px 5px;
+            margin:-12px 5px;
             padding: 2px 16px;
         }
         
+        .companyLogo {
+            background-color: black;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            border:blue solid 5px;
+        }
+
+        .companyInfo{
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+            border:red solid 1px;
+            
+        }
 
     </style>
 
 </head>
 
 <body>
-    <h1>@ViewData["Title"]</h1>
-    <p>Use this page to detail your site's privacy profile.</p>
-    <h1>TEST</h1>
+    <div class="row">
+        <div class="col-3 profileContainer">
+            <div class="companyLogo">
+                <img src="https://bordersessions.org/wp-content/uploads/2019/03/the-hague-tech-final.png" alt="Company Logo" style="padding: 15px;max-width: 100%;">
+            </div> <br>
 
-
-    <div class="profileContainer">
-        <div class="row" >
-            <div class="col-lg-4 col-sm-12" >
-                <i class="fa fa-user-circle"></i>
+            <div class="col-6 companyInfo">
+                <h1>The Hague Tech</h1>
             </div>
-            <div class="col-lg-4 col-sm-6" >
-                <div class="row">Company name</div>
-                <div class="row">Activity score</div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="row">
-                    <button class="btn btn-primary" type="submit">Edit Profile Button</button>
-                </div>
-                <div class="row">Website Link</div>
-                <div class="row">Social Links</div>
+            <div class="col-3">
+                dadawd
             </div>
         </div>
     </div>
-
 
 
     <div class="tab">
@@ -130,24 +135,24 @@
     </div>
 
     <div id="About" class="tabcontent">
-        <div>
+        <div class="aboutCompany">
             <br>
             <h3>About the Company</h3>
             <p>Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free. Gastropub green juice jianbing ramps umami dolore. Slow-carb hammock deserunt pitchfork affogato eiusmod everyday carry wolf tempor mlkshk umami swag iPhone green juice.</p> 
         </div> <br><hr><br>
-        <div>
+        <div class="skills">
             <h3>Skills and Expertises</h3> 
-            <div>
+            <div class="chips">
                 <button class="chipLabel">Chip Label</button>
             </div>
         </div> <br><hr><br>
-        <div>
+        <div class="teamMember">
             <br>
-            <h3>Team</h3>
+            <h3>Team</h3> <br>
             <div class="card">
-	            <img src="https://byuc.files.wordpress.com/2012/07/avat-2.jpg" alt="Avatar">
+	            <img src="https://byuc.files.wordpress.com/2012/07/avat-2.jpg" alt="Avatar" style="border-radius: 5px 5px 0 0;width:100%;height:74%;">
 	            <div class="nameCard">
-	        	    <h4><b>Furkan Ozkan</b></h4> 
+	        	    <h6><b>Joe Smith</b></h6> 
                 </div>
 	            <div class="jobCard">
     	            <p>Interior Designer</p> 
@@ -157,7 +162,7 @@
         
         <br><hr><br>
         
-        <div>
+        <div class="project">
             <h3>Project</h3>
             
         </div>
@@ -175,7 +180,7 @@
         <h3>new profile activities </h3>
         <p>Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free. Gastropub green juice jianbing ramps umami dolore. Slow-carb hammock deserunt pitchfork affogato eiusmod everyday carry wolf tempor mlkshk umami swag iPhone green juice.</p>
     </div>
-
+    </div>
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
