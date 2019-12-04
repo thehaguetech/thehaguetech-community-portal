@@ -1,7 +1,5 @@
 ﻿<!DOCTYPE html>
 
-
-
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -13,50 +11,105 @@
 </head>
 
 <body>
-    
-        <div class="menu">
-            <div class="row">
-            <div class="col-6">
+    <div class="menu">
+        <div class="row">
+            <div class="col-md-4">
                 <div class="logo">
                     <a asp-area="" asp-controller="Home" asp-action="index">The Hague Tech Community Platform</a>
                 </div>
             </div>
-            <div class="col-6">            
+            <div class="col-md-8">            
                 <nav class="topNav">
                     <ul>
-                        <!-- <li><a class="fa fa-comment" asp-area="" asp-controller="Home" asp-action="Chatt"></a></li> -->
-                        <!-- <li><a class="fa fa-calendar-o fa-lg" asp-area="" asp-controller="Home" asp-action="Calendar"></a></li> -->
-                        <li><a class="fa fa-user fa-2x" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
-                        <li><a class="fa fa-bell fa-2x" asp-area="" asp-controller="Home" asp-action="Notification"></a></li>
-                        <li><a class="fa fa-sign-out fa-2x" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
+                        <li><a class="fa fa-user" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
+                        <li><a class="fa fa-bell" asp-area="" asp-controller="Home" asp-action="Notification"></a></li>
+                        <li><a class="fa fa-sign-out" asp-area="" asp-controller="Home" asp-action="Profile"></a></li>
                     </ul>
                 </nav>
                 <div class="menuIcon">
-                    <i class="fa fa-bars fa-2x"></i>
+                    <i class="fa fa-search fa-3x"></i>                                     
+                    <i onclick="myFunction()" class="fa fa-bars fa-3x dropbtn"></i>
+                    <div class="dropdown">
+                        <div id="myDropdown" class="dropdown-content">
+                            <h4 class="dropdownHeader">Community</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Event">Companies</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Event">Members</a>
+                            <!-- <a asp-area="" asp-controller="Home" asp-action="Event">THT-Staff</a> -->
+                            <h4 class="dropdownHeader">Tools</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Event">Event</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Calendar">Room booking</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Calendar">Calendar</a>
+                            <h4 class="dropdownHeader">More</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Profile">Settings</a>
+                            <a asp-area="" asp-controller="Home" asp-action="Profile">Support</a>
+                            <h4 class="dropdownHeader">log out</h4>
+                            <a asp-area="" asp-controller="Home" asp-action="Profile">Log out</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="sideNav col-2">
+    <div class="sideNavContainer">
+        <div class="sideNav">
             <nav>
-                <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <div class="search">                    
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search..." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <h2 class="sideNavHeader">Community</h2>
+                <ul class="sideNavList">
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Companies</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> Members</a></li>
+                    <!-- <li><div class="fa fa-handshake-o" style="color:white;"></div><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action=""> THT-staff</a></li> -->
+                </ul>
+                <h2 class="sideNavHeader">Tools</h2>               
+                <ul class="sideNavList">
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Event</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Room Booking</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Calendar"> Calendar</a></li>
+                </ul>
+                <h2 class="sideNavHeader">More</h2>
+                <ul class="sideNavList">
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Event"> Settings</a></li>
+                    <li><a class="sideNavContent" asp-area="" asp-controller="Home" asp-action="Calendar"> Support</a></li>
                 </ul>
             </nav>
-        </div>          
-        <div class="container col-10">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
         </div> 
-    </div>
+    </div>  
+    <div class="containerMain">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div> 
+    
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+        }
+        }
+    }
+    }
+    </script> 
     @RenderSection("Scripts", required: false)
 </body>
 </html>
