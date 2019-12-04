@@ -1,32 +1,24 @@
-html, body{
-    height:100%;
-}
 .menu{ /*Top navigation*/
-    background: rgb(15,34,71);
     background: linear-gradient(360deg, rgba(15,34,71,1) 45%, rgba(83,97,188,1) 100%);
     padding: 2px 18px;
     position: sticky;
     top: 0;
     z-index: 1;
-    width: 100%;
     border-bottom: 1px solid #5361BC;
 }
-/*-------------------------------------------------------------*/
-/*HEADER*/
+/*---------------------------HEADER----------------------------------*/
 .logo{
-    height:75px;    
+    height:75px;
     vertical-align: middle;
     display: table-cell;
-    vertical-align: middle;
 }
 .logo a{ /*THT header*/
-    float: left;
     color:rgb(223, 223, 223);
     text-decoration: none;
     font-size: 24px;
-}
+} /*TOP ICONS*/
+
 .topNav ul{
-    list-style:none;
     overflow: hidden;
     margin: 0 20px 0 0;
     text-align: right;
@@ -41,12 +33,11 @@ html, body{
     font-size: 200%;
 }
 .topNav ul:hover li:hover a:hover{
-    color: #5361BC;
+    color: #FFEC50;
 }
 /*MOBILE ICONS*/
 .menuIcon{ 
     text-align: right;
-    box-sizing: border-box;
     cursor: pointer;
     color:rgb(223, 223, 223);
     display: none;
@@ -55,18 +46,12 @@ html, body{
     z-index: 1;
 }
 .menuIcon i{
-    padding: 10px;
+    padding: 8px;
 }
 .menuIcon i:hover {
-    color: #5361BC;
+    color: #FFEC50;
 }
 /*----------------MOBILE DROPDOWN-----------------*/
-.dropbtn{
-    color:rgb(223, 223, 223);
-    padding: 10px;
-    cursor: pointer;
-}
-  
 .dropdown{
     position: relative;
     display: inline-block;
@@ -94,8 +79,9 @@ html, body{
         background-color: #5361BC;
         color:rgb(223, 223, 223);
 }
-  
-.show {display: block;}
+.show {
+    display: block;
+}
 
 .dropdownHeader{
     background-color: #0F2247;
@@ -103,35 +89,11 @@ html, body{
     align-content: left;
     padding-right: 5%;
 }
-/*-----------SEARCH------------------------*/
-.search {
-    margin: 10% 2% 5% 2%;
-    overflow: hidden;
-    padding-left: 10%;
-}
-.search input[type=text] {
-    border-radius: 10px 0 0 10px;
-    border: none;
-    padding: 2% 12% 2% 12%;
-}
-.search button {
-    padding: 2%;
-    background: rgb(223, 223, 223);
-    border: none;
-    cursor: pointer;
-    border-radius: 0 10px 10px 0;
-    background: #5361BC;
-    color:rgb(223, 223, 223);
-  }
-.search button:hover {
-    background: rgb(223, 223, 223);
-    color: #5361BC;
-  }
-  
+
 /*-----------------------------SIDE-NAV-----------------------------------*/
 .sideNavContainer{
     width:20%;
-    height: 200vh;
+    height: 200vh; /*CHANGE THIS WHEN THE PAGE IS LONGER*/
     background-color: #0F2247;
     float:left;
     position: relative;
@@ -141,45 +103,58 @@ html, body{
     display: inline-block;
     width: 20%;
     position: fixed;
-    top: 8vh;
-}
-
-.sideNavList{
-    list-style:none;
+    top: 10vh;
 }
 
 .sideNavHeader {
     color:rgb(223, 223, 223);
-    padding-left: 40px;
     border-bottom: 2px solid #5361BC;
-    margin: 0% 10% 0 10%;
-    padding-left: 0%;
+    margin: 0% 5% 0 5%;
 }
 .sideNavContent{
     color:rgb(223, 223, 223);
     text-decoration: none;
     font-size: 20px;
 }
-.sideNavFooter{
-    bottom: 0%;
-    color:rgb(223, 223, 223);
-    top:90px;
-    font-size: 12px;
-}
-.sideNavList a:hover{
-    text-decoration: none;
+.sideNavList{
+    padding-left: 5%;
 }
 
+.sideNavList a:hover{
+    text-decoration: none;
+    color: #FFEC50;
+}
+
+/*-----------SEARCH------------------------*/
+.search { /*NOT WORKING*/
+    overflow: hidden;
+    padding-left: 5%;
+    margin: 4% 0% 4% 0%;
+}
+.search input[type=text] {
+    border-radius: 10px 0 0 10px;
+    border: none;
+    padding: 3% 14% 3% 14%;
+}
+.search button {
+    padding: 3%;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    background: #5361BC;
+    color:rgb(223, 223, 223);
+  }
+.search button:hover {
+    background: #FFEC50;
+    color: #5361BC;
+  }
 /*-------------------------------------------------------------*/
 /*MAIN*/
 .containerMain{ /*Home content*/ 
     width: 80%;
-    line-height: 20px;
-    text-align: justify;
     display: inline-block;
     padding: 2%;
 }
-
 /*-------------------------------MEDIA------------------------------*/
 @media screen and (max-width:1650px){
     .sideNavContainer{
@@ -193,7 +168,7 @@ html, body{
     }
 }
 
-@media screen and (max-width:1124px){
+@media screen and (max-width:1100px){
     .logo{
         display: none;
     }
