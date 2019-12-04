@@ -11,6 +11,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using thehaguetech_community_portal.Models;
 
+public class Item
+{
+    public string name { get; set; }
+    public int type { get; set; }
+
+}
+
 
 [ApiController]
     [Route("[controller]")]
@@ -61,8 +68,7 @@ using thehaguetech_community_portal.Models;
         // return Ok(this.cities);
         System.Console.WriteLine(this.cities);
 
-
-
+    
             if(id == "101"){
                 return Enumerable.Range(1, 5).Select(index => new WeatherForecast
                 {
@@ -104,41 +110,102 @@ using thehaguetech_community_portal.Models;
                 HttpContent httpContent = new FormUrlEncodedContent(
                     new[]
                     {
+                    new KeyValuePair<string, string>("content-Type", "application/x-www-form-urlencoded"),
                     new KeyValuePair<string, string>("grant_type", "client_credentials"),
                     new KeyValuePair<string, string>("client_id", clientId),
                     new KeyValuePair<string, string>("scope", scope),
                     new KeyValuePair<string, string>("client_secret", clientSecret)
                     });
                 tokenRequest.Content = httpContent;
+                
                 responseMessage = await client.SendAsync(tokenRequest);
             }
-            return await responseMessage.Content.ReadAsStringAsync();
+
+            return await (responseMessage.Content.ReadAsStringAsync());
         }
 
+public  async Task OnGet(String rawJwtToken)
+    {
+        var token = rawJwtToken.Split(":")[1].Split(",")[0].ToString();
+        JObject jToken = JObject.Parse(rawJwtToken);
+        System.Console.WriteLine(jToken);
+        System.Console.WriteLine(jToken.GetValue("access_token"));
+
+        var request = new HttpRequestMessage(HttpMethod.Get, 
+        // "https://app.officernd.com/api/v1/organizations/thehaguetech/resources");
+
+        "https://app.officernd.com/api/v1/organizations/thehaguetech/members");
+        // request.Headers.Add("Accept", "application/vnd.github.v3+json");
+        // request.Headers.Add("Authorization", "Bearer " + token);
+      
+        request.Headers.Add("Authorization", "Bearer " + jToken.GetValue("access_token"));
+        // System.Console.WriteLine(Apicontroller.token);
+        // Apicontroller.token = token;
+        // System.Console.WriteLine(Apicontroller.token);
+
+
+        var client = new HttpClient();
+        System.Console.WriteLine(request);
+
+        System.Console.WriteLine(token);
+
+        var response = await client.SendAsync(request);
+       Console.WriteLine(response.Content);
+        if (response.IsSuccessStatusCode)
+        {
+
+            String responseMessage;
+            responseMessage = await response.Content.ReadAsStringAsync();
+            System.Console.WriteLine(responseMessage);
+
+            JArray jsonArray = JArray.Parse(responseMessage);
+
+            System.Console.WriteLine(jsonArray.Count());
+            JArray jArray = JArray.Parse(responseMessage);
+            System.Console.WriteLine(jArray);
+            // var dict = JsonConvert.DeserializeObject<Members>(responseMessage);
+            // Console.WriteLine(dict);
+            foreach(JObject jsobj  in jArray){
+                Console.WriteLine(jsobj.GetValue("email"));
+            }  
+        }
+        else
+        {
+            
+        }
+    }
 
       [HttpGet]
         // public ActionResult<IEnumerable<GameState>> LoadGame()
-        public  ActionResult<IEnumerable<WeatherForecast>> GetAllAsync()
+        public async Task<ActionResult<IEnumerable<WeatherForecast>>> GetAllAsync()
         {
 
 
-            Uri authorizationServerTokenIssuerUri = new Uri("https://identity.officernd.com/oauth/token");
-            string clientId = "y8lP1LZNSQyzcGys";    
-            string clientSecret = "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH";
-            string scope = "officernd.api.read";
 
-            //access token request
-            string rawJwtToken = RequestTokenToAuthorizationServer(
-                 authorizationServerTokenIssuerUri,
-                 clientId, 
-                 scope, 
-                 clientSecret)
-                .GetAwaiter()
-                .GetResult();
+        await Apicontroller.getAllMembersAsync();
+            // Uri authorizationServerTokenIssuerUri = new Uri("https://identity.officernd.com/oauth/token");
+            // string clientId = "y8lP1LZNSQyzcGys";    
+            // string clientSecret = "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH";
+            // string scope = "officernd.api.write officernd.api.read";
+
+        // System.Console.WriteLine(authorizationServerTokenIssuerUri);
 
 
+        // //access token request
+        // string rawJwtToken = RequestTokenToAuthorizationServer(
+        //      authorizationServerTokenIssuerUri,
+        //      clientId, 
+        //      scope, 
+        //      clientSecret)
+        //     .GetAwaiter()
+        //     .GetResult();
 
-            System.Console.WriteLine(rawJwtToken);
+        // System.Console.WriteLine(rawJwtToken);
+        // await this.OnGet(rawJwtToken);
+
+
+
+
 
         // var request = new HttpRequestMessage(HttpMethod.Post, "https://identity.officernd.com/oauth/token");
         // request.Content = new FormUrlEncodedContent(new Dictionary<string, string> {
@@ -146,50 +213,50 @@ using thehaguetech_community_portal.Models;
         //     { "client_secret", "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH" },
         //     { "grant_type", "client_credentials" }
         // });
-        
-            // var client = new HttpClient
-            // {
-            //     BaseAddress = new Uri("https://identity.officernd.com/oauth/token")
-            // };
+
+        // var client = new HttpClient
+        // {
+        //     BaseAddress = new Uri("https://identity.officernd.com/oauth/token")
+        // };
 
 
-            // var content = new StringContent(
-            //     JsonConvert.SerializeObject(
-            //         new 
-            //         { 
-            //             client_id = "y8lP1LZNSQyzcGys", 
-            //             client_secret = "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH", 
-            //             grant_type = "client_credentials" 
-            //         }), Encoding.UTF8, "application/json"); 
-                    
-            //                        System.Console.WriteLine(content);
+        // var content = new StringContent(
+        //     JsonConvert.SerializeObject(
+        //         new 
+        //         { 
+        //             client_id = "y8lP1LZNSQyzcGys", 
+        //             client_secret = "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH", 
+        //             grant_type = "client_credentials" 
+        //         }), Encoding.UTF8, "application/json"); 
 
-            // var response = await client.PostAsync("oauth/token", content); 
-            // var tokenResponse = await response.Content.ReadAsStringAsync();
+        //                        System.Console.WriteLine(content);
 
-
-            // System.Console.WriteLine(response);
-            // System.Console.WriteLine(tokenResponse);
+        // var response = await client.PostAsync("oauth/token", content); 
+        // var tokenResponse = await response.Content.ReadAsStringAsync();
 
 
-
-    // var request = new HttpRequestMessage(HttpMethod.Post, "https://identity.officernd.com/oauth/token");
-    // request.Content = new FormUrlEncodedContent(new Dictionary<string, string> {
-    //     { "client_id", "y8lP1LZNSQyzcGys" },
-    //     { "client_secret", "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH" },
-    //     { "grant_type", "client_credentials" }
-    // });
-    // System.Console.WriteLine(request.Content);
-    // var response = await client.SendAsync(request);
-    // response.EnsureSuccessStatusCode();
-    // System.Console.WriteLine(response);
+        // System.Console.WriteLine(response);
+        // System.Console.WriteLine(tokenResponse);
 
 
-    // var payload = JObject.Parse(await response.Content.ReadAsStringAsync());
-    // var token = payload.Value<string>("access_token");
+
+        // var request = new HttpRequestMessage(HttpMethod.Post, "https://identity.officernd.com/oauth/token");
+        // request.Content = new FormUrlEncodedContent(new Dictionary<string, string> {
+        //     { "client_id", "y8lP1LZNSQyzcGys" },
+        //     { "client_secret", "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH" },
+        //     { "grant_type", "client_credentials" }
+        // });
+        // System.Console.WriteLine(request.Content);
+        // var response = await client.SendAsync(request);
+        // response.EnsureSuccessStatusCode();
+        // System.Console.WriteLine(response);
 
 
-                        var rng = new Random();
+        // var payload = JObject.Parse(await response.Content.ReadAsStringAsync());
+        // var token = payload.Value<string>("access_token");
+
+
+        var rng = new Random();
 
 
                         
