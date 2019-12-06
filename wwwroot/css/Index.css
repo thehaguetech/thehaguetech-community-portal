@@ -1,11 +1,34 @@
-div {
-    height:50px;
-  }
+
   .short-div {
     height:25px;
   }
 
-  img {
+  /* img {
     width:100px
-    
+  } */
+
+  .carousel, .carousel-inner > .item { 
+    display: run-in; 
+    width: 100%; 
+    height: auto!important; 
+} 
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img { 
+    display: block; 
+    height: auto; 
+    max-width: 100%; 
+    line-height: 1; 
+} 
+
+.carousel-container { 
+    margin-left:0;
+  
+  }
+
+  img{
+    margin-left: auto; 
+    margin-right: auto;
+    display: block;
+
   }
