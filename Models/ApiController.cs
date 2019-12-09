@@ -79,6 +79,41 @@ namespace thehaguetech_community_portal.Models
     }
 
 
+
+    public static async Task<IList<Company>> getAllCompanies(){
+        System.Console.WriteLine(Apicontroller.JWTtoken);
+        string apiUrl = "https://app.officernd.com/api/v1/organizations/thehaguetech/teams";
+       
+        JArray responseMessage = await requestHttp(apiUrl);
+       
+        if(responseMessage != null){
+        IList<Company> companies = new List<Company>();
+
+        foreach(JObject Jcompany  in responseMessage){
+            // Console.WriteLine(Jcompany.GetValue("email"));
+            Company _company =  new Company();
+
+            // _company.profileID = Jcompany.GetValue("_id").ToString();
+            System.Console.WriteLine(Jcompany.GetValue("name").ToString());
+            // _company.email = Jcompany.GetValue("email").ToString();
+            // _company.picture = Jcompany.GetValue("image").ToString();
+            // _company.memberSince = DateTime.Parse(Jcompany.GetValue("startDate").ToString());
+
+
+            _company.comapnyName = Jcompany.GetValue("name").ToString();
+            // _company.companyWebsite = Jcompany.GetValue("url").ToString();
+            // _company.companyAddress = Jcompany.GetValue("address").ToString();
+            // _company.companyType = Jcompany.GetValue("description").ToString();
+
+            companies.Add(_company);
+            }  
+
+            System.Console.WriteLine(companies);
+            return companies;
+        }
+        return new List<Company>();
+    }
+
     public static async Task getAllMembersAsync(){
         System.Console.WriteLine(Apicontroller.JWTtoken);
         string apiUrl = "https://app.officernd.com/api/v1/organizations/thehaguetech/members";

@@ -177,12 +177,13 @@ public  async Task OnGet(String rawJwtToken)
 
       [HttpGet]
         // public ActionResult<IEnumerable<GameState>> LoadGame()
-        public async Task<ActionResult<IEnumerable<WeatherForecast>>> GetAllAsync()
+        public async Task<IEnumerable<Company>> GetAllAsync()
         {
 
+            var p =  await Apicontroller.getAllCompanies();
+            System.Console.WriteLine(p);
 
-
-        await Apicontroller.getAllMembersAsync();
+            return p;
             // Uri authorizationServerTokenIssuerUri = new Uri("https://identity.officernd.com/oauth/token");
             // string clientId = "y8lP1LZNSQyzcGys";    
             // string clientSecret = "whasbS3xxik2G1a94ZmsrLXZyfLUIkIH";
@@ -260,13 +261,13 @@ public  async Task OnGet(String rawJwtToken)
 
 
                         
-           return Enumerable.Range(1, 2).Select(index => new WeatherForecast
-                {
-                    Date = DateTime.Now.AddDays(index),
-                    TemperatureC = rng.Next(-20, 55),
-                    Summary = Summaries[rng.Next(Summaries.Length)]
-                })
-                .ToArray();
+        //    return Enumerable.Range(1, 2).Select(index => new WeatherForecast
+        //         {
+        //             Date = DateTime.Now.AddDays(index),
+        //             TemperatureC = rng.Next(-20, 55),
+        //             Summary = Summaries[rng.Next(Summaries.Length)]
+        //         })
+        //         .ToArray();
             
         }
 

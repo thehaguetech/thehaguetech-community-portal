@@ -8,14 +8,8 @@ namespace thehaguetech_community_portal.Models
     public class Profile
     {
         [Key]
-        public int profileID {get; set;}
+        public string profileID {get; set;}
 
-        [Required]
-        public string firstName {get; set;}
-
-        [Required]
-        public string lastName {get; set;}
-        
         [Required]
         public string email {get; set;}
         
