@@ -56,9 +56,7 @@ C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreap
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\thehaguetech-community-portal.TagHelpers.output.cache
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\thehaguetech-community-portal.RazorCoreGenerate.cache
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Calendar.cshtml.g.cs
-C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Chatt.cshtml.g.cs
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Notification.cshtml.g.cs
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Profile.cshtml.g.cs
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -72,3 +70,10 @@ C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreap
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\thehaguetech-community-portal.pdb
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\thehaguetech-community-portal.csproj.CopyComplete
 C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Event.cshtml.g.cs
+C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Companies.cshtml.g.cs
+C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Members.cshtml.g.cs
+C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\RoomBooking.cshtml.g.cs
+C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Settings.cshtml.g.cs
+C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Support.cshtml.g.cs
+C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Notification.cshtml.g.cs
+C:\Users\Temp\Documents\GitHub\thehaguetech-community-portal\obj\Debug\netcoreapp3.0\Razor\Views\Home\Chatt.cshtml.g.cs

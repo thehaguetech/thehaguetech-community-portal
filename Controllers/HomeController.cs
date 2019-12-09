@@ -28,17 +28,23 @@ namespace thehaguetech_community_portal.Controllers
             return View();
         }
 
-        public IActionResult Chatt()
-        {
-            return View();
-        }
-
-        public IActionResult Notification()
-        {
-            return View();
-        }
-
         public IActionResult Calendar()
+        {
+            return View();
+        }
+        public IActionResult Companies()
+        {
+            return View();
+        }
+        public IActionResult Members()
+        {
+            return View();
+        }
+        public IActionResult Settings()
+        {
+            return View();
+        }
+        public IActionResult Support()
         {
             return View();
         }
@@ -46,6 +52,15 @@ namespace thehaguetech_community_portal.Controllers
         {
             return View();
         }
+        public IActionResult RoomBooking()
+        {
+            return View();
+        }
+        public IActionResult Notification()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
