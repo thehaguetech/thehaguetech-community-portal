@@ -9,15 +9,14 @@ namespace thehaguetech_community_portal.Models
     {
         [Key]
         public string profileID {get; set;}
-
         [Required]
         public string email {get; set;}
-        
         [Required]
         [Column(TypeName="Date")]
         public DateTime memberSince {get; set;}
-
         public string picture {get; set;}
+
+        public string description {get; set;}
 
     }
 }

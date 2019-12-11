@@ -79,9 +79,7 @@ public class Item
                 .ToArray();
             }
                         
-        
-
-
+    
                     if(id == "100"){
 
         return Ok(this.cities);
@@ -177,10 +175,10 @@ public  async Task OnGet(String rawJwtToken)
 
       [HttpGet]
         // public ActionResult<IEnumerable<GameState>> LoadGame()
-        public async Task<IEnumerable<Company>> GetAllAsync()
+        public async Task<IEnumerable<Member>> GetAllAsync()
         {
 
-            var p =  await Apicontroller.getAllCompanies();
+            var p =  await Apicontroller.getMember("5dd7969300936900dacca60b");
             System.Console.WriteLine(p);
 
             return p;
@@ -203,10 +201,6 @@ public  async Task OnGet(String rawJwtToken)
 
         // System.Console.WriteLine(rawJwtToken);
         // await this.OnGet(rawJwtToken);
-
-
-
-
 
         // var request = new HttpRequestMessage(HttpMethod.Post, "https://identity.officernd.com/oauth/token");
         // request.Content = new FormUrlEncodedContent(new Dictionary<string, string> {
@@ -257,7 +251,7 @@ public  async Task OnGet(String rawJwtToken)
         // var token = payload.Value<string>("access_token");
 
 
-        var rng = new Random();
+        // var rng = new Random();
 
 
                         
@@ -291,7 +285,6 @@ public  async Task OnGet(String rawJwtToken)
 
         this.cities.Append(a);
         this.cities.Append(b);
-
 
         return Ok(this.cities);
         }

@@ -17,9 +17,5 @@ namespace thehaguetech_community_portal.Models
         
         public string companyRoom {get; set;}
 
-        [Required]
-        public string companyType {get; set;}
-
-
     }
 }
