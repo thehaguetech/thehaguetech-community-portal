@@ -1,36 +1,30 @@
 /* COMPANY INFORMATION */
 /* section 1 */
-.companyProfile{
-    border: 2px solid red;
-    justify-content: center;
-    align-items: center;
-}
-.section{
-    border: 2px solid blue;
-}
 
+
+.companyIcon{
+    height: 260px;
+}
 .companyLogo {
     background-color: black;
-    width: 240px;
-    height: 240px;
+    width: 80%;
     border-radius: 50%;
-    margin:2% 25%;
+    margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+
 }
 .companyLogo img{
-    width: 200px;
-    padding: 15px;  
+    width: 83%;
+    padding: 10%;
 }
 /* section 2 */
 .companyInfo{
     height: 260px;
-    padding: 2%;
 }
 
 .companyInformation{
-    font-weight:bold;
+    font-weight: 600;
     margin: 1% 0%;
 }
 
@@ -39,44 +33,46 @@
     color: #0F2247;
     border: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 100%;
     padding: 10px 15px 10px 15px;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
  }
-
  .companyButton:hover{
     background: #0F2247;
     color: #FFEC50;
     text-decoration: none;
  }
+
  /* section 3 */
 .companyLink{
     height: 260px;
     padding: 2%;
 }
 /* SOCIALNMEDIA LINKS */
-
 .SocialIconBox{
-    /* display: flex; */
+    height: 50px;
+    width: 50px;
 }
 
 .SocialMediaIcon{
-    height: 150%;
-    width: 75%;
-    border-radius: 50%;
     background: #0F2247;
-    color: #FFEC50;
-    font-size: 250%;
-    padding: 5%;
+    color: #fff;
+    border-radius: 100%;
     cursor: pointer;
     text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    padding:10px;
 }
 
+.SocialMediaIcon:hover{
+    color: #FFEC50;
+    text-decoration: none;
+}
 /*Navigation*/
 .nav-tabs{
     overflow: hidden;
@@ -85,144 +81,87 @@
 }
 
 .underTab li a {
-    background-color: inherit;
-    color: white;
+    color: #fff;
     font-weight: bold;
-    border: none;
     outline: none;
     cursor: pointer;
     transition: 0.3s;
     font-size: 17px;
 }
 
-/* Page 1 */
-.tab-content {
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+/* ------------------------Page 1------------------------  */
+.section{
+    padding: 2%;
+    border-bottom: solid 1px lightgrey;
 }
-
+/*EXPERTIES*/
+.expertises{
+    padding: 0;
+}
 .expertises li{
-    border: none;
-    color: white;
+    color: #fff;
     background-color: #5361BC;
-    margin: 7px;
-    padding: 2px 6px;
-    border: 2px solid #808080;
-    border-radius: 15px;
+    margin: 1px;
+    padding: 5px 20px;
     display: inline-block;
     text-align: center;
+    text-transform: uppercase;
 }
-.expertises li:hover {
-    color: black;
-    background-color: #fff;
-    border: 2px solid #808080;
-    cursor: pointer;
-}
-
+/*MEMBER CARDS*/
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 10px;
     text-align: center;
-    margin: 15px;
+    margin: 0% 1% 1% 0%;
     display: inline-block;
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 0.5%;
+    border: 2px solid #5361BC;
 }
 
 .card img{
-    width: 130px;
-    padding: 10px;  
-}
-
-.projectPic{
     width: 120px;
-    height: 120px;
+    height:  120px;
+    border-radius: 100%; 
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.cardText{
+    padding: 2%;
+    font-weight: bold;
 }
 
-.projectManPic{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+.cardButton{
+    border:none;
+    background-color: #5361BC;
+    font-size: 120%;
+    color: #fff;
+    padding: 2% 10%;
+    margin: 2% 5%;
 }
-
-.a,.b,.c{
-    height:140px;
-    margin-right:5px;
-    float:left;
+/*PROJECT*/
+.projectPic{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #5361BC;
+    overflow:hidden;
 }
-
-
-.y,.projectMan{
-    
-    display:inline-block;
-    margin-right:5px;
+.projectText{
+    padding: 1% 0%;
 }
-
-.joinButton {
-   border-radius: 2px;
-   background: #FFEC50;
-   border: none;
-   color: #5361BC;
-   font-size: 18px;
-   padding: 8px 20px 8px 20px;
-   cursor: pointer;  
-}
-
-.button_join{
-    margin:15px 0px 15px 20px;
-    align-items:left;
-}
-
 
 /* PAGE 2 */
-.activityInside div{
+.activity{
+    padding: 1%;
+}
+
+.activityScore{
     background-color: #5361BC;
-    color: white;
-    box-shadow: 0 6px 10px 0 rgba(83, 97, 188,0.4);
-    transition: 0.3s;
-    display: inline-block;
-    margin: 20px 45px;
-    height: 120px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    color: #fff;
+    margin:0 4%;
+    padding: 2%;   
 }
 
-.interest li{
-    border: none;
-    color: white;
-    background-color: #5361BC;
-    margin: 5PX 50px 10PX -40PX;
-    padding: 2px 6px;
-    border: 2px solid #808080;
-    border-radius: 15px;
-    display: inline-block;
-    text-align: center;
-}
+@media screen and (max-width:650){
+    .companyLogo{
+        display:none;
+    }
 
-.interest li:hover {
-    color: black;
-    background-color: #fff;
-    border: 2px solid #808080;
-    cursor: pointer;
-}
-/* PAGE 3 */
-
-
-
-
-
-
-.subProject {
-    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.4);
-    transition: 0.3s;
-    border-radius: 10px;	
-    margin: 0px;
-    display: inline-block;
-    width: 90%;
 }
