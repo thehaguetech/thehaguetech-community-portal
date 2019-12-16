@@ -1,0 +1,254 @@
+.nav-tabs{
+    overflow: hidden;
+    border: none;
+    background-color: #0F2247;
+}
+
+.underTAb li a {
+    background-color: inherit;
+    color: white;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+.tab-content {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.meetButton {
+   border-radius: 2px;
+   background: #FFEC50;
+   border: none;
+   color: #5361BC;
+   text-transform: uppercase;
+   font-size: 16px;
+   padding: 10px 15px 10px 15px;
+   transition: all 0.2s;
+   cursor: pointer;
+   
+}
+.meetButton span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.8s;
+}
+.meetButton span:after {
+   content: '\00bb';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -20px;
+   transition: 0.5s;
+}
+.meetButton:hover span {
+   padding-right: 25px;
+}
+.meetButton:hover span:after {
+   opacity: 1;
+   right: 0;
+}
+
+.connectButton {
+   border-radius: 2px;
+   background: #FFEC50;
+   border: none;
+   color: #5361BC;
+   text-transform: uppercase;
+   font-size: 16px;
+   padding: 10px 15px 10px 15px;
+   cursor: pointer;  
+   
+}
+.connectButton span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   margin: 20px;
+}
+
+.facebook,.twitter,.linkedin,.instagram {
+   border-radius: 50%;
+   width: 45px;
+   background: #FFEC50;
+   border: none;
+   color: #5361BC;
+   text-transform: uppercase;
+   font-size: 18px;
+   padding: 10px;
+   cursor: pointer;
+   display: inline-block;
+   text-align: center;
+   margin:10px;
+
+   
+}
+
+.expertises{
+    list-style-type: none;
+    
+}
+.expertises li{
+    border: none;
+    color: white;
+    background-color: #5361BC;
+    margin: 7px;
+    padding: 2px 6px;
+    border: 2px solid #808080;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+}
+
+.expertises li:hover {
+    color: black;
+    background-color: #fff;
+    border: 2px solid #808080;
+    cursor: pointer;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    text-align: center;
+    margin: 15px;
+    display: inline-block;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.card-body {
+    display: inline;
+    
+}
+
+.card img{
+    width: 130px;
+    padding: 10px;  
+}
+
+.companyLogo {
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 20px 40px 20px;
+    border:black solid 3px;			
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.companyLogo img{
+    width: 150px;
+    padding: 10px;  
+}
+
+.companyInfo h3,h5{
+    font-weight: bold;
+}
+
+.projectPic{
+    width: 120px;
+    height: 120px;
+}
+
+.projectManPic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.a,.b,.c{
+    height:140px;
+    
+    margin-right:5px;
+    
+    float:left;
+
+}
+
+.x,.y,.projectMan{
+    
+    display:inline-block;
+    margin-right:5px;
+}
+    
+.joinButton {
+   border-radius: 2px;
+   background: #FFEC50;
+   border: none;
+   color: #5361BC;
+   font-size: 18px;
+   padding: 8px 20px 8px 20px;
+   cursor: pointer;  
+   
+}
+
+.button_join{
+    margin:15px 0px 15px 20px;
+    align-items:left;
+    
+}
+
+.interest li{
+    border: none;
+    color: white;
+    background-color: #5361BC;
+    margin: 5PX 50px 10PX -40PX;
+    padding: 2px 6px;
+    border: 2px solid #808080;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+}
+
+.interest li:hover {
+    color: black;
+    background-color: #fff;
+    border: 2px solid #808080;
+    cursor: pointer;
+}
+
+.subProject {
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.4);
+    transition: 0.3s;
+    border-radius: 10px;	
+    margin: 0px;
+    display: inline-block;
+    width: 90%;
+}
+
+.subProject:hover {
+    box-shadow: 0 8px 16px 0 rgba(83, 97, 188,0.6);
+}
+
+.activityInside div{
+    background-color: #5361BC;
+    color: white;
+    box-shadow: 0 6px 10px 0 rgba(83, 97, 188,0.4);
+    transition: 0.3s;
+    display: inline-block;
+    margin: 20px 45px;
+    height: 120px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.activityInside div:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
