@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {}
+    "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {
+    "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
+        "projectUniqueName": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
         "projectName": "thehaguetech-community-portal",
-        "projectPath": "C:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
-        "packagesPath": "C:\\Users\\furka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\furka\\Documents\\GitHub\\thehaguetech-community-portal\\obj\\",
+        "projectPath": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
+        "packagesPath": "C:\\Users\\Temp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\furka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Temp\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

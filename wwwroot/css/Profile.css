@@ -1,10 +1,90 @@
+/* COMPANY INFORMATION */
+/* section 1 */
+.companyProfile{
+    border: 2px solid red;
+    justify-content: center;
+    align-items: center;
+}
+.section{
+    border: 2px solid blue;
+}
+
+.companyLogo {
+    background-color: black;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin:2% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.companyLogo img{
+    width: 200px;
+    padding: 15px;  
+}
+/* section 2 */
+.companyInfo{
+    height: 260px;
+    padding: 2%;
+}
+
+.companyInformation{
+    font-weight:bold;
+    margin: 1% 0%;
+}
+
+.companyButton {
+    background: #FFEC50;
+    color: #0F2247;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+ }
+
+ .companyButton:hover{
+    background: #0F2247;
+    color: #FFEC50;
+    text-decoration: none;
+ }
+ /* section 3 */
+.companyLink{
+    height: 260px;
+    padding: 2%;
+}
+/* SOCIALNMEDIA LINKS */
+
+.SocialIconBox{
+    /* display: flex; */
+}
+
+.SocialMediaIcon{
+    height: 150%;
+    width: 75%;
+    border-radius: 50%;
+    background: #0F2247;
+    color: #FFEC50;
+    font-size: 250%;
+    padding: 5%;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Navigation*/
 .nav-tabs{
     overflow: hidden;
     border: none;
     background-color: #0F2247;
 }
 
-.underTAb li a {
+.underTab li a {
     background-color: inherit;
     color: white;
     font-weight: bold;
@@ -15,86 +95,13 @@
     font-size: 17px;
 }
 
-
+/* Page 1 */
 .tab-content {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
 }
 
-.meetButton {
-   border-radius: 2px;
-   background: #FFEC50;
-   border: none;
-   color: #5361BC;
-   text-transform: uppercase;
-   font-size: 16px;
-   padding: 10px 15px 10px 15px;
-   transition: all 0.2s;
-   cursor: pointer;
-   
-}
-.meetButton span {
-   cursor: pointer;
-   display: inline-block;
-   position: relative;
-   transition: 0.8s;
-}
-.meetButton span:after {
-   content: '\00bb';
-   position: absolute;
-   opacity: 0;
-   top: 0;
-   right: -20px;
-   transition: 0.5s;
-}
-.meetButton:hover span {
-   padding-right: 25px;
-}
-.meetButton:hover span:after {
-   opacity: 1;
-   right: 0;
-}
-
-.connectButton {
-   border-radius: 2px;
-   background: #FFEC50;
-   border: none;
-   color: #5361BC;
-   text-transform: uppercase;
-   font-size: 16px;
-   padding: 10px 15px 10px 15px;
-   cursor: pointer;  
-   
-}
-.connectButton span {
-   cursor: pointer;
-   display: inline-block;
-   position: relative;
-   margin: 20px;
-}
-
-.facebook,.twitter,.linkedin,.instagram {
-   border-radius: 50%;
-   width: 45px;
-   background: #FFEC50;
-   border: none;
-   color: #5361BC;
-   text-transform: uppercase;
-   font-size: 18px;
-   padding: 10px;
-   cursor: pointer;
-   display: inline-block;
-   text-align: center;
-   margin:10px;
-
-   
-}
-
-.expertises{
-    list-style-type: none;
-    
-}
 .expertises li{
     border: none;
     color: white;
@@ -106,7 +113,6 @@
     display: inline-block;
     text-align: center;
 }
-
 .expertises li:hover {
     color: black;
     background-color: #fff;
@@ -127,37 +133,9 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-
-.card-body {
-    display: inline;
-    
-}
-
 .card img{
     width: 130px;
     padding: 10px;  
-}
-
-.companyLogo {
-    background-color: black;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 20px 20px 40px 20px;
-    border:black solid 3px;			
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.companyLogo img{
-    width: 150px;
-    padding: 10px;  
-}
-
-.companyInfo h3,h5{
-    font-weight: bold;
 }
 
 .projectPic{
@@ -173,19 +151,17 @@
 
 .a,.b,.c{
     height:140px;
-    
     margin-right:5px;
-    
     float:left;
-
 }
 
-.x,.y,.projectMan{
+
+.y,.projectMan{
     
     display:inline-block;
     margin-right:5px;
 }
-    
+
 .joinButton {
    border-radius: 2px;
    background: #FFEC50;
@@ -194,13 +170,27 @@
    font-size: 18px;
    padding: 8px 20px 8px 20px;
    cursor: pointer;  
-   
 }
 
 .button_join{
     margin:15px 0px 15px 20px;
     align-items:left;
-    
+}
+
+
+/* PAGE 2 */
+.activityInside div{
+    background-color: #5361BC;
+    color: white;
+    box-shadow: 0 6px 10px 0 rgba(83, 97, 188,0.4);
+    transition: 0.3s;
+    display: inline-block;
+    margin: 20px 45px;
+    height: 120px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 .interest li{
@@ -221,6 +211,12 @@
     border: 2px solid #808080;
     cursor: pointer;
 }
+/* PAGE 3 */
+
+
+
+
+
 
 .subProject {
     box-shadow: 0 6px 10px 0 rgba(0,0,0,0.4);
@@ -229,26 +225,4 @@
     margin: 0px;
     display: inline-block;
     width: 90%;
-}
-
-.subProject:hover {
-    box-shadow: 0 8px 16px 0 rgba(83, 97, 188,0.6);
-}
-
-.activityInside div{
-    background-color: #5361BC;
-    color: white;
-    box-shadow: 0 6px 10px 0 rgba(83, 97, 188,0.4);
-    transition: 0.3s;
-    display: inline-block;
-    margin: 20px 45px;
-    height: 120px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.activityInside div:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
 }
