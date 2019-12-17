@@ -54,6 +54,7 @@
 .SocialIconBox{
     height: 50px;
     width: 50px;
+    display:block;
 }
 
 .SocialMediaIcon{
@@ -113,7 +114,7 @@
     margin: 0% 1% 1% 0%;
     display: inline-block;
     padding: 0.5%;
-    border: 2px solid #5361BC;
+    border: 2px solid lightgrey;
 }
 
 .card img{
@@ -137,14 +138,30 @@
     margin: 2% 5%;
 }
 /*PROJECT*/
+.project{
+    border: 2px solid lightgrey;
+    padding: 2%;
+}
+
 .projectPic{
-    width: 200px;
-    height: 200px;
-    border: 1px solid #5361BC;
-    overflow:hidden;
+    width: 100%;
+    height: 100%;
+    border: 2px solid lightgrey;
+}
+
+.projectButton{
+    background-color: #FFEC50;
+    color: #0F2247;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 1% 0% 0% 50%;
 }
 .projectText{
-    padding: 1% 0%;
+    padding: 1.5%;
 }
 
 /* PAGE 2 */
@@ -157,11 +174,4 @@
     color: #fff;
     margin:0 4%;
     padding: 2%;   
-}
-
-@media screen and (max-width:650){
-    .companyLogo{
-        display:none;
-    }
-
 }
