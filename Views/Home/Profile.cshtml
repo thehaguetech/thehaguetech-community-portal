@@ -1,4 +1,184 @@
-﻿@{
-    ViewData["Title"] = "Profile";
-}
-<h1>@ViewData["Title"]</h1>
+﻿<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="~/css/Profile.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- -----------------------------------PROFILE HEADER-------------------------------------------------------------------- -->
+    <div class="row" style="padding: 0% 1%;">
+		<div id="first_col" class= "col-3">
+			<div class="companyIcon">
+				<div class="companyLogo">
+					<img src="https://bordersessions.org/wp-content/uploads/2019/03/the-hague-tech-final.png" alt="Company Logo">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-5">
+			<div class="companyInfo">
+				<h2 class="companyInformation" style="font-weight:bold;">The Hague Tech</h2>
+				<h4 class="companyInformation">Company Type:</h4>
+				<h4 class="companyInformation">Location:</h4>
+				<h4 class="companyInformation">Office Room:</h4>
+				<br>
+				<br>
+				<div><a class="companyButton" href="#" target="_blank" >Plan a meeting</a></div>
+			</div>
+		</div>
+
+		<div class="col-4">
+			<div class="companyLink">
+				<div class="row">
+					<div class="col-6">
+						<h4 class="companyInformation" >Website: </h4>
+						<div class="compInfo">www.thehaguetech.com</div>
+					</div>
+					<div  class="col-6" align="right" style="margin-top:12px;"><a id="button_connect" class="companyButton" href="#" target="_blank" >Connect</a></div>
+				</div>
+				<h4 class="companyInformation" >Email: </h4>
+				<div class="compInfo">email.tht-thehaugue.nl</div>
+				<br>
+				<h4 class="companyInformation" style="margin: 5% 0%">Social media:</h4>
+				<div class="row">
+					<div class="col-3"><div class="SocialIconBox"><a class="SocialMediaIcon fa fa-facebook-official" href="#" target="_blank" ></a></div></div>
+					<div class="col-3"><div class="SocialIconBox"><a class="SocialMediaIcon fa fa-twitter" href="#" target="_blank" ></a></div></div>
+					<div class="col-3"><div class="SocialIconBox"><a class="SocialMediaIcon fa fa-linkedin" href="#" target="_blank" ></a></div></div>
+					<div class="col-3"><div class="SocialIconBox"><a class="SocialMediaIcon fa fa-instagram" href="#" target="_blank" ></a></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!---------------------------- TAB NAVIGATION --------------------------------------------------------------------------->
+    <div class="underTab">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#about">About</a></li>
+            <li><a data-toggle="tab" href="#activity">Activity</a></li>
+            <li><a data-toggle="tab" href="#connections">Connections</a></li>
+        </ul>
+<!-- ------------------------------------------PAGE 1----------------------------------------------------------------- -->
+        <div class="tab-content">
+            <div id="about" class="tab-pane fade in active">
+
+                <div class="section">
+                    <h3>About the Company</h3>
+                    <p>Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free. Gastropub green juice jianbing ramps umami dolore. Slow-carb hammock deserunt pitchfork affogato eiusmod everyday carry wolf tempor mlkshk umami swag iPhone green juice.
+						Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free.
+						Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free.
+						Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free.
+					</p> 
+                </div>
+				
+                <div class="section">
+                    <h3>Skills and Expertises</h3> 
+					<ul class="expertises">
+						<li>Lorem Ipsum</li>
+					</ul>
+                </div> 
+				
+                <div class="section">
+                    <h3>Team</h3>
+					<div class="card">
+						<img src="https://byuc.files.wordpress.com/2012/07/avat-2.jpg" class="card-img-top" alt="Avatar">
+						<div>
+							<div class="cardText">Name Namesson</div>
+							<div class="cardText">Manager DR-constructions</div>
+							<br>
+							<button class="cardButton">Add contact</button>
+						</div>
+					</div>
+					<div class="card">
+						<img src="https://byuc.files.wordpress.com/2012/07/avat-2.jpg" class="card-img-top" alt="Avatar">
+						<div>
+							<div class="cardText">Name Namesson</div>
+							<div class="cardText">Manager DR-constructions</div>
+							<br>
+							<button class="cardButton">Add contact</button>
+						</div>
+					</div>
+                </div> 
+                
+                <div class="section">
+                    <h3>Ongoing projects</h3>
+
+
+					<div class="project">
+						<div class="row">
+							<div id="last_col" class="col-3">
+								<img src="https://miro.medium.com/max/3071/1*KWi9xbTBKnnOASpN_aS5ww.png" class="projectPic" alt="projectPic">
+							</div>
+							<div class="col-9">
+								<div class="row">
+									<div class="col-6">
+										<h4>THT Community Portal<h4>
+										<h5>Project type:<h5>
+									</div>
+									<div class="col-6"><a class="projectButton" href="#" target="_blank" >JOIN</a></div>
+									<div class="projectText">Lorem ipsum dolor amet brooklyn commodo laborum laboris air plant in chartreuse ut nulla normcore id non hashtag kombucha ipsum. Quis poutine farm-to-table literally, woke neutra gluten-free. Gastropub green juice jianbing ramps umami dolore. Slow-carb hammock deserunt pitchfork affogato eiusmod everyday carry wolf tempor mlkshk umami swag iPhone green juice.</div>
+									<ul class="expertises" style="margin-left: 1.5%;">
+										<li>Lorem Ipsum</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+                </div>
+            </div>
+<!-- --------------------------------------PAGE 2--------------------------------------------------------------------- -->
+    <div id="activity" class="tab-pane fade">
+		<div class="empty">
+			<div class="section">			
+				<h3>Activity inside the community</h3>
+				<div>
+					<div class="row activity">
+						<div class="col-2 activityScore"><h2>345</h2>Community Connections</div>
+						<div class="col-2 activityScore"><h2>4</h2>Events Hosted</div>
+						<div class="col-2 activityScore"><h2>16</h2>Events Attended</div>
+						<div class="col-2 activityScore"><h2>168</h2>Open Office Hours Organized</div>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<h3>Interest</h3>
+				<ul class="expertises">
+					<li>Lorem Ipsum</li>
+				</ul>
+			</div>
+		</div>
+    </div>
+<!-- ----------------------------------------------Page 3------------------------------------------------------------- -->
+    <div id="connections" class="tab-pane fade">
+		<div class="section">
+			<h3>Community Connections</h3>
+			<div class="card">
+				<img src="https://byuc.files.wordpress.com/2012/07/avat-2.jpg" class="card-img-top" alt="Avatar">
+				<div>
+					<div class="cardText">Name Namesson</div>
+					<div class="cardText">Manager DR-constructions</div>
+					<br>
+					<button class="cardButton">Add contact</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- -------------------------------------------Script--------------------------------------------------------- -->
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+             }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
