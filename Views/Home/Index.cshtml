@@ -1,11 +1,101 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
 <head>
-  <link rel="stylesheet" href="~/css/Index.css">
+    <link rel="stylesheet" href="~/css/Index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+
+
 </head>
 <body> 
-    <h1>@ViewData["Title"]</h1>
+<div class="containerIndex">
+    <div class="row-fluid h-100">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-80" src="http://moveopen.nl/wp-content/uploads/2018/12/0-2-1024x422.jpeg" alt="First slide" width="1000" height="300">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Welcome to THT</h5>
+                        <p>Connect. Create. Collaborate</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="https://miro.medium.com/max/8064/1*XPxaCo87QbyB5_mhGBVwCQ.jpeg" alt="Second slide" width="600" height="300">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Welcome to THT</h5>
+                        <p>Connect. Create. Collaborate</p>
+                    </div>                
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="https://coworker.imgix.net/photos/netherlands/the-hague/the-hague-tech/main.jpg?w=488&h=257&fit=crop&mark=/template/img/wm_icon.png&markscale=5&markalign=center,middle/800x200?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide" width="600" height="300" text-align: center;>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Welcome to THT</h5>
+                        <p>Connect. Create. Collaborate</p>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="row" style="margin-top:4%;" >
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9"> 
+            <div class="long-div" style="background-color:#C4C4C4">
+                <br><h1 class="titleMid">Upcoming Events</h2><br>
+                <div class="card-deck">
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.thehaguesecuritydelta.com/images/Partnership_HSD_THT_YesDelft_The_Hague.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Event A</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="#" class="btn btn-primary">More Information</a> 
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.thehaguesecuritydelta.com/images/Partnership_HSD_THT_YesDelft_The_Hague.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Event B</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">More Information</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.thehaguesecuritydelta.com/images/Partnership_HSD_THT_YesDelft_The_Hague.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Event C</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <a href="#" class="btn btn-primary">More Information</a>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div class="rowIndexRight">
+                <h4 class="titleRight"> People with similar interests</h4>
+                <div>
+                    <div class="row">
+                        <img class="circular--square" alt="Peter Hofman" src="https://media.licdn.com/dms/image/C4E03AQEAmTxD45BypA/profile-displayphoto-shrink_200_200/0?e=1581552000&amp;v=beta&amp;t=Tm_Ymk6MvUnDGsVi8h06GskxW2E_tMDWhWw8_51Yhq8" >
+                        <a href="#" class="People"> <h6>Peter Hofman</h6>&nbsp;Founder AI-LAB </a>
+                    </div>
+                    <div class="row">
+                        <img class="circular--square" alt="Peter Hofman" src="https://media.licdn.com/dms/image/C4E03AQEAmTxD45BypA/profile-displayphoto-shrink_200_200/0?e=1581552000&amp;v=beta&amp;t=Tm_Ymk6MvUnDGsVi8h06GskxW2E_tMDWhWw8_51Yhq8" >
+                        <a href="#" class="People"> <h6>Peter Hofman</h6>&nbsp;Founder AI-LAB </a>
+                    </div>                    
+                </div>
+           
+                                                           
+                
+            </div>
+            <div class="row">
+                
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 

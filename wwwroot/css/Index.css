@@ -1,0 +1,84 @@
+.carousel, .carousel-inner > .item { 
+    display: run-in; 
+    width: 100%; 
+    height: auto!important; 
+} 
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img { 
+    display: block; 
+    height: auto; 
+    max-width: 100%; 
+    line-height: 1; 
+} 
+
+.carousel-container { 
+    margin-left:0;
+    margin-right:0;
+}
+
+img{
+    margin-left: auto; 
+    margin-right: auto;
+    display: block;
+}
+
+.btnIndex{
+  background-color: #FFEC50;
+  border-color: #0F2247;
+  border-radius: 8px;
+  border-width: medium;
+}
+
+.circular--square {
+  border-radius: 100%;
+  width: 25%;
+  height:25%;
+  float: left;
+  Padding-top: 5%;
+}
+
+.containerIndex {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.card-deck {
+  padding: 0 5% 10% 5%;
+}
+
+.rowIndexRight {
+  height: 100%;
+  background-color: #C4C4C4;
+}
+
+h1.titleMid{
+  font-weight: bold;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+.titleRight{
+  font-weight: bold;
+  padding: 5% 12%;
+  background-color: #0F2247;
+  color:rgb(223, 223, 223);
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #FFEC50 !important;
+  color: black !important;
+  justify-content: center;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+  background-color: #0F2247 !important;
+}
+.People{
+  margin-right: 15%;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  padding-top: 10%;
+  border-bottom: 1px solid grey;
+}
