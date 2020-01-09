@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {}
+    "/Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/thehaguetech-community-portal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj": {
+    "/Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/thehaguetech-community-portal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
+        "projectUniqueName": "/Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/thehaguetech-community-portal.csproj",
         "projectName": "thehaguetech-community-portal",
-        "projectPath": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\thehaguetech-community-portal.csproj",
-        "packagesPath": "C:\\Users\\Temp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Temp\\Documents\\GitHub\\thehaguetech-community-portal\\obj\\",
+        "projectPath": "/Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/thehaguetech-community-portal.csproj",
+        "packagesPath": "/Users/xiao/.nuget/packages/",
+        "outputPath": "/Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Temp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/xiao/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -36,6 +38,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "(, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -54,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
