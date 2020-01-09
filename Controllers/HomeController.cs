@@ -36,8 +36,13 @@ namespace thehaguetech_community_portal.Controllers
         {
             return View();
         }
+
+        
         public IActionResult Members()
         {
+
+            var p =   Apicontroller.getMember("5dd7969300936900dacca60b");
+            
             return View();
         }
         public IActionResult Settings()

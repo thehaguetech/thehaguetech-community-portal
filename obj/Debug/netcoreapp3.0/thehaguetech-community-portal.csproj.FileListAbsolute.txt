@@ -88,6 +88,7 @@ C:/Users/Temp/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreap
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/bin/Debug/netcoreapp3.0/thehaguetech-community-portal.pdb
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/bin/Debug/netcoreapp3.0/thehaguetech-community-portal.Views.dll
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/bin/Debug/netcoreapp3.0/thehaguetech-community-portal.Views.pdb
+/Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/bin/Debug/netcoreapp3.0/Newtonsoft.Json.dll
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/thehaguetech-community-portal.csprojAssemblyReference.cache
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/staticwebassets/thehaguetech-community-portal.StaticWebAssets.Manifest.cache
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/staticwebassets/thehaguetech-community-portal.StaticWebAssets.xml
@@ -118,6 +119,6 @@ C:/Users/Temp/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreap
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/thehaguetech-community-portal.RazorTargetAssemblyInfo.cache
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/thehaguetech-community-portal.RazorTargetAssemblyInfo.cs
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/thehaguetech-community-portal.Views.pdb
+/Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/thehaguetech-community-portal.csproj.CopyComplete
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/thehaguetech-community-portal.dll
 /Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/thehaguetech-community-portal.pdb
-/Users/xiao/Documents/Documents/GitHub/thehaguetech-community-portal/obj/Debug/netcoreapp3.0/thehaguetech-community-portal.csproj.CopyComplete
